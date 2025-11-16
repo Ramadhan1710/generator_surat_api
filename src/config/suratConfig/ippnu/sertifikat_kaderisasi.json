@@ -1,0 +1,62 @@
+{
+  "template": "sertifikat_kaderisasi.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus harian.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "sertifikat_kaderisasi_ketua",
+      "label": "Foto Sertifikat Kaderisasi Ketua",
+      "helpText": "Unggah foto sertifikat kaderisasi ketua dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "sertifikat_kaderisasi_sekretaris",
+      "label": "Foto Sertifikat Kaderisasi Sekretaris",
+      "helpText": "Unggah foto sertifikat kaderisasi sekretaris dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "sertifikat_kaderisasi_bendahara",
+      "label": "Foto Sertifikat Kaderisasi Bendahara",
+      "helpText": "Unggah foto sertifikat kaderisasi bendahara dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "template": "berita_acara_pemilihan_ketua.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus yang terpilih.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal",
+      "label": "Tanggal Pemilihan Ketua",
+      "helpText": "Contoh: 15",
+      "example": "15",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "bulan",
+      "label": "Bulan Pemilihan Ketua",
+      "helpText": "Contoh: Agustus, Bulan pelaksanaan berita acara pemilihan ketua.",
+      "example": "Agustus",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tahun",
+      "label": "Tahun Pemilihan Ketua",
+      "helpText": "Contoh: 2024, Tahun pelaksanaan berita acara pemilihan ketua.",
+      "example": "2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "waktu_pemilihan_ketua",
+      "label": "Waktu Pemilihan Ketua",
+      "helpText": "Contoh: 10.00, Waktu pelaksanaan berita acara pemilihan ketua.",
+      "example": "10.00",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tempat_pemilihan_ketua",
+      "label": "Tempat Pemilihan Ketua",
+      "helpText": "Contoh: Aula Madrasah, Tempat pelaksanaan berita acara pemilihan ketua.",
+      "example": "Aula Madrasah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "total_suara_sah_pencalonan_ketua",
+      "label": "Total Suara Sah Pencalonan Ketua",
+      "helpText": "Contoh: 50, Total suara sah dalam pencalonan ketua.",
+      "example": "50",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "total_suara_tidak_sah_pencalonan_ketua",
+      "label": "Total Suara Tidak Sah Pencalonan Ketua",
+      "helpText": "Contoh: 3, Total suara tidak sah dalam pencalonan ketua.",
+      "example": "3",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "total_suara_tidak_sah_pemilihan_ketua",
+      "label": "Total Suara Tidak Sah Pemilihan Ketua",
+      "helpText": "Contoh: 2, Total suara tidak sah dalam pemilihan ketua.",
+      "example": "2",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "total_suara_sah_pemilihan_ketua",
+      "label": "Total Suara Sah Pemilihan Ketua",
+      "helpText": "Contoh: 48, Total suara sah dalam pemilihan ketua.",
+      "example": "48",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "nama_wilayah",
+      "label": "Nama Wilayah Penetapan Berita Acara",
+      "helpText": "Contoh: Ngepeh, Nama wilayah tempat pemilihan ketua berlangsung.",
+      "example": "Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Penetapan Berita Acara (Hijriah)",
+      "helpText": "Contoh: 20 Muharram 1445 H, Tanggal penetapan berita acara pemilihan ketua dalam kalender Hijriah.",
+      "example": "20 Muharram 1445 H",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Penetapan Berita Acara (Masehi)",
+      "helpText": "Contoh: 10 September 2024, Tanggal penetapan berita acara pemilihan ketua dalam kalender Masehi.",
+      "example": "10 September 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "waktu_penetapan",
+      "label": "Waktu Penetapan Berita Acara",
+      "helpText": "Contoh: 14:00, Waktu penetapan berita acara pemilihan ketua.",
+      "example": "14.00",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_ketua",
+      "label": "Nama Ketua Sidang",
+      "helpText": "Contoh: Siti Zahro, Nama lengkap ketua sidang pemilihan ketua.",
+      "example": "Siti Zahro",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris Sidang",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap sekretaris sidang pemilihan ketua.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_anggota",
+      "label": "Nama Anggota Sidang",
+      "helpText": "Contoh: Siti Fatimah, Nama lengkap anggota sidang pemilihan ketua.",
+      "example": "Siti Fatimah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "pencalonan_ketua",
+      "label": "Tahap Pencalonan Ketua",
+      "helpText": "Contoh: Tahap pencalonan ketua, terdapat beberapa calon yang diajukan oleh anggota.",
+      "type": "array",
+      "example": [
+        {
+          "nomor": 1,
+          "nama": "Siti Zahro",
+          "alamat": "Desa Ngepeh",
+          "jml_suara_sah": 25
+        },
+        {
+          "nomor": 2,
+          "nama": "Siti Aminah",
+          "alamat": "Desa Ngepeh",
+          "jml_suara_sah": 23
+        },
+        {
+          "nomor": 3,
+          "nama": "Siti Fatimah",
+          "alamat": "Desa Ngepeh",
+          "jml_suara_sah": 22
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nomor",
+          "label": "Nomor Urut Calon Ketua",
+          "type": "integer",
+          "example": 1
+        },
+        {
+          "name": "nama",
+          "label": "Nama Calon Ketua",
+          "type": "string",
+          "example": "Siti Zahro"
+        },
+        {
+          "name": "alamat",
+          "label": "Alamat Calon Ketua",
+          "type": "string",
+          "example": "Desa Ngepeh"
+        },
+        {
+          "name": "jml_suara_sah",
+          "label": "Jumlah Suara Sah",
+          "type": "integer",
+          "example": 25
+        }
+      ]
+    },
+    {
+      "name": "pemilihan_ketua",
+      "label": "Tahap Pemilihan Ketua",
+      "helpText": "Contoh: Tahap pemilihan ketua, terdapat beberapa calon yang diajukan oleh anggota.",
+      "type": "array",
+      "example": [
+        {
+          "nomor": 1,
+          "nama": "Siti Zahro",
+          "alamat": "Desa Ngepeh",
+          "jml_suara_sah": 25
+        },
+        {
+          "nomor": 2,
+          "nama": "Siti Aminah",
+          "alamat": "Desa Ngepeh",
+          "jml_suara_sah": 23
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nomor",
+          "label": "Nomor Urut Calon Ketua",
+          "type": "integer",
+          "example": 1
+        },
+        {
+          "name": "nama",
+          "label": "Nama Calon Ketua",
+          "type": "string",
+          "example": "Siti Zahro"
+        },
+        {
+          "name": "alamat",
+          "label": "Alamat Calon Ketua",
+          "type": "string",
+          "example": "Desa Ngepeh"
+        },
+        {
+          "name": "jml_suara_sah",
+          "label": "Jumlah Suara Sah",
+          "type": "integer",
+          "example": 25
+        }
+      ]
+    },
+    {
+      "name": "nama_ketua_terpilih",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Siti Zahro, Nama lengkap ketua terpilih dalam rapat pemilihan ketua.",
+      "example": "Siti Zahro",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_ketua_terpilih",
+      "label": "Alamat Ketua Terpilih",
+      "helpText": "Contoh: Desa Ngepeh, Alamat lengkap ketua terpilih dalam rapat pemilihan ketua.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "total_suara_ketua_terpilih",
+      "label": "Total Suara Ketua Terpilih",
+      "helpText": "Contoh: 25, Jumlah suara yang diperoleh ketua terpilih dalam rapat pemilihan ketua.",
+      "example": 25,
+      "type": "integer",
+      "required": true
+    },
+    {
+      "name": "formatur",
+      "label": "Tahap Pemilihan Tim Formatur",
+      "helpText": "Contoh: Tahap pemilihan Tim Formatur, terdapat beberapa anggota yang diajukan oleh ketua terpilih.",
+      "type": "array",
+      "example": [
+        {
+          "nomor": 1,
+          "nama": "Siti Zahro",
+          "alamat": "Ngepeh",
+          "daerah_pengkaderan": "Ketua Terpilih"
+        },
+        {
+          "nomor": 2,
+          "nama": "Siti Zulaikah",
+          "alamat": "Ngepeh",
+          "daerah_pengkaderan": "Ketua Domisioner"
+        },
+        {
+          "nomor": 3,
+          "nama": "Siti Aminah",
+          "alamat": "Ngepeh",
+          "daerah_pengkaderan": "Zona 1"
+        },
+        {
+          "nomor": 4,
+          "nama": "Siti Fatimah",
+          "alamat": "Ngepeh",
+          "daerah_pengkaderan": "Zona 2"
+        },
+        {
+          "nomor": 5,
+          "nama": "Siti Khadijah",
+          "alamat": "Ngepeh",
+          "daerah_pengkaderan": "Zona 3"
+        },
+        {
+          "nomor": 6,
+          "nama": "Siti Aisyah",
+          "alamat": "Ngepeh",
+          "daerah_pengkaderan": "Zona 4"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nomor",
+          "label": "Nomor Urut Calon Ketua",
+          "type": "integer",
+          "example": 1
+        },
+        {
+          "name": "nama",
+          "label": "Nama Calon Ketua",
+          "type": "string",
+          "example": "Siti Zahro"
+        },
+        {
+          "name": "alamat",
+          "label": "Alamat Calon Ketua",
+          "type": "string",
+          "example": "Desa Ngepeh"
+        },
+        {
+          "name": "daerah_pengkaderan",
+          "label": "Daerah Pengkaderan",
+          "type": "string",
+          "example": "Zona 1"
+        }
+      ]
+    }
+  ],
+  "ttd": [
+    {
+      "name": "ttd_ketua",
+      "label": "Tanda tangan ketua sidang",
+      "required": true
+    },
+    {
+      "name": "ttd_sekretaris",
+      "label": "Tanda tangan sekretaris sidang",
+      "required": true
+    },
+    {
+      "name": "ttd_anggota",
+      "label": "Tanda tangan anggota sidang",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_sktn",
+      "source": "jenis_lembaga",
+      "transform": "abbreviate"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    }
+  ]
+}

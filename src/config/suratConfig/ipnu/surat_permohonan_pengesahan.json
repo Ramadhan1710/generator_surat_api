@@ -1,0 +1,155 @@
+{
+  "template": "surat_permohonan_pengesahan.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_telepon_lembaga",
+      "label": "Nomor Telepon Lembaga",
+      "helpText": "Contoh: 08123456789",
+      "example": "08123456789",
+      "type": "text",
+      "required": true
+    },  
+    {
+      "name": "alamat_lembaga",
+      "label": "Alamat Lembaga",
+      "helpText": "Contoh: Ds. Macanan, Loceret, Nganjuk, Jawa Timur 64471",
+      "example": "Ds. Macanan, Loceret, Nganjuk, Jawa Timur 64471",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email_lembaga",
+      "label": "Email Lembaga",
+      "helpText": "Contoh: email@lembaga.com",
+      "example": "email@lembaga.com",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "helpText": "Contoh: Untuk PR:  01/PR/A/I/7454/IX/2024, Untuk PK: 01/PK/A/I/7454/IX/2024",
+      "example": "01/PR/A/I/7454/IX/2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_rapat",
+      "label": "Tanggal Rapat Pemilihan",
+      "helpText": "Contoh: 1 September 2024, Tanggal rapat pemilihan pengurus baru dilaksanakan.",
+      "example": "1 September 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Pembuatan Surat (Hijriah)",
+      "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah.",
+      "example": "1 Safar 1445",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Pembuatan Surat (Masehi)",
+      "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi.",
+      "example": "10 September 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus yang terpilih.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_ketua_terpilih",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Ahmad Fauzi, Nama lengkap ketua terpilih dalam rapat pemilihan pengurus.",
+      "example": "Ahmad Fauzi",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_sekretaris_terpilih",
+      "label": "Nama Sekretaris Terpilih",
+      "helpText": "Contoh: Ahmad Zulfan, Nama lengkap sekretaris terpilih dalam rapat pemilihan pengurus.",
+      "example": "Ahmad Zulfan",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "jenis_lembaga_induk",
+      "label": "Jenis Lembaga Induk",
+      "helpText": "Contoh: Untuk PR : Ranting, Untuk PK : Madrasah/Sekolah, dll.",
+      "example": "Ranting",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "ttd": [
+    {
+      "name": "ttd_ketua",
+      "label": "Tanda Tangan Ketua Terpilih",
+      "helpText": "Unggah gambar tanda tangan ketua terpilih dalam format .jpg atau .png, tolong pastikan gambar memiliki latar belakang transparan untuk hasil terbaik.",
+      "required": true
+    },
+    {
+      "name": "ttd_sekretaris",
+      "label": "Tanda Tangan Sekretaris Terpilih",
+      "helpText": "Unggah gambar tanda tangan sekretaris terpilih dalam format .jpg atau .png, tolong pastikan gambar memiliki latar belakang transparan untuk hasil terbaik.",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "nama_ketua_terpilih_upper",
+      "source": "nama_ketua_terpilih",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_sekretaris_terpilih_upper",
+      "source": "nama_sekretaris_terpilih",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_title",
+      "source": "jenis_lembaga",
+      "transform": "titlecase"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "template": "kartu_identitas.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus harian.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "kartu_identitas_ketua",
+      "label": "Foto Kartu Identitas Ketua",
+      "helpText": "Unggah foto kartu identitas ketua dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "kartu_identitas_sekretaris",
+      "label": "Foto Kartu Identitas Sekretaris",
+      "helpText": "Unggah foto kartu identitas sekretaris dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "kartu_identitas_bendahara",
+      "label": "Foto Kartu Identitas Bendahara",
+      "helpText": "Unggah foto kartu identitas bendahara dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    }
+  ]
+}

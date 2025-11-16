@@ -1,0 +1,29 @@
+{
+  "name": "surat_generator_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.67.1",
+    "docxtemplater-image-module-free": "^1.1.1",
+    "express": "^5.1.0",
+    "image-size": "^2.0.2",
+    "jszip": "^3.10.1",
+    "libreoffice-convert": "^1.7.0",
+    "multer": "^2.0.2",
+    "pizzip": "^3.2.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^13.0.0"
+  }
+}

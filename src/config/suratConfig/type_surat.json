@@ -1,0 +1,42 @@
+{
+  "types": [
+    {
+      "name": "Surat Permohonan Pengesahan",
+      "value": "surat_permohonan_pengesahan"
+    },
+    {
+      "name": "Berita Acara Pemilihan Ketua",
+      "value": "berita_acara_pemilihan_ketua"
+    },
+    {
+      "name": "Surat Keputusan Rapat Anggota",
+      "value": "surat_keputusan_rapat_anggota"
+    },
+    {
+      "name": "Susunan Pengurus Organisasi",
+      "value": "susunan_pengurus_organisasi"
+    },
+    {
+      "name": "Curiculum Vitae",
+      "value": "curiculum_vitae"
+    },
+    {
+      "name": "Kartu Identitas",
+      "value": "kartu_identitas"
+    },
+    {
+      "name": "Sertifikat Kaderisasi",
+      "value": "sertifikat_kaderisasi"
+    }
+  ],
+  "lembaga": [
+    {
+      "name": "IPNU",
+      "value": "IPNU"
+    },
+    {
+      "name": "IPPNU",
+      "value": "IPPNU"
+    }
+  ]
+}

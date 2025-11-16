@@ -1,0 +1,483 @@
+{
+  "template": "berita_acara_penyusunan_pengurus.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus harian yang dibentuk.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_penyusunan",
+      "label": "Tanggal Penyusunan Berita Acara",
+      "helpText": "Contoh: 15 Februari 2024, Tanggal penyusunan berita acara penyusunan pengurus.",
+      "example": "15 Februari 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tempat_penyusunan",
+      "label": "Tempat Penyusunan Berita Acara",
+      "helpText": "Contoh: Aula Madrasah, Tempat penyusunan berita acara penyusunan pengurus.",
+      "example": "Aula Madrasah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wilayah",
+      "label": "Nama Wilayah",
+      "helpText": "Contoh: Ngepeh, Macanan, Mojosari, Nama wilayah tempat penyusunan berita acara.",
+      "example": "Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "hari_penyusunan",
+      "label": "Hari Penyusunan",
+      "helpText": "Contoh: Jumat, Hari penyusunan berita acara penyusunan pengurus.",
+      "example": "Jumat",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Hijriah",
+      "helpText": "Contoh: 5 Rabiul Awal 1445, Tanggal hijriah penyusunan berita acara penyusunan pengurus.",
+      "example": "5 Rabiul Awal 1445",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Masehi",
+      "helpText": "Contoh: 15 Februari 2024, Tanggal masehi penyusunan berita acara penyusunan pengurus.",
+      "example": "15 Februari 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_ketua",
+      "label": "Nama Ketua IPPNU",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap ketua IPPNU wilayah terkait.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris IPPNU",
+      "helpText": "Contoh: Lina Marlina, Nama lengkap sekretaris IPPNU wilayah terkait.",
+      "example": "Lina Marlina",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "wakil_ketua",
+      "label": "Data Wakil Ketua",
+      "helpText": "Masukkan data wakil ketua dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "title": "Wakil Ketua I",
+          "nama": "Siti Zahro",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "title": "Wakil Ketua II",
+          "nama": "Fadilatun Nafia",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "title": "Wakil Ketua III",
+          "nama": "Rina Lestari",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "title": "Wakil Ketua IV",
+          "nama": "Dina Marlina",
+          "ttd": "\\src\\templates\\ttd.png"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Jabatan",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "ttd",
+          "label": "Tanda Tangan Wakil Ketua",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "wakil_sekre",
+      "label": "Data Wakil Sekretaris",
+      "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "title": "Wakil Sekretaris I",
+          "nama": "Siti Zahro",
+          "ttd": "\\src\\templates\\ttd.png"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Jabatan",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "ttd",
+          "label": "Tanda Tangan Wakil Sekretaris",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "nama_bendahara",
+      "label": "Nama Bendahara",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara pengurus harian yang terpilih.",
+      "example": "Fadilatun Nafia",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wakil_bend",
+      "label": "Nama Wakil Bendahara",
+      "helpText": "Contoh: Rina Lestari, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
+      "example": "Rina Lestari",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "pelindung",
+      "label": "Data Pelindung",
+      "helpText": "Masukkan data pelindung dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "pembina",
+      "label": "Data Pembina",
+      "helpText": "Masukkan data pembina dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "no": 1,
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "no": 2,
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "no",
+          "label": "No",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "koordinator_po",
+      "label": "Nama Koordinator Departemen Pengembangan Organisasi",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen pengembangan organisasi.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "anggota_po",
+      "label": "Data Anggota Departemen Pengembangan Organisasi",
+      "helpText": "Masukkan data anggota departemen pengembangan organisasi dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "koordinator_ppps",
+      "label": "Nama Koordinator Departemen Pendidikan, Pengkaderan, dan Pengembangan SDM",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen pendidikan, pengkaderan, dan pengembangan SDM.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "anggota_ppps",
+      "label": "Data Anggota Departemen Pendidikan, Pengkaderan, dan Pengembangan SDM",
+      "helpText": "Masukkan data anggota departemen pendidikan, pengkaderan, dan pengembangan SDM dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "koordinator_dsk",
+      "label": "Nama Koordinator Departemen Dakwah dan Sosial Kemasyarakatan",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen dakwah dan sosial kemasyarakatan.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "anggota_dsk",
+      "label": "Data Anggota Departemen Dakwah dan Sosial Kemasyarakatan",
+      "helpText": "Masukkan data anggota departemen dakwah dan sosial kemasyarakatan dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "koordinator_ob",
+      "label": "Nama Koordinator Departemen Olahraga dan Budaya",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen olahraga dan budaya.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "anggota_ob",
+      "label": "Data Anggota Departemen Olahraga dan Budaya",
+      "helpText": "Masukkan data anggota departemen olahraga dan budaya dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+     {
+      "name": "lembaga",
+      "label": "Data Lembaga - Lembaga",
+      "helpText": "Masukkan data lembaga dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Lembaga Pendidikan dan Kaderisasi",
+          "direktur": "Drs. H. Muhsin",
+          "sekretaris": "H. Abdul Karim",
+          "anggota": [
+            {
+              "nama": "Drs. H. Muhsin"
+            },
+            {
+              "nama": "H. Abdul Karim"
+            }
+          ]
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lembaga",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "direktur",
+          "label": "Nama Direktur Lembaga",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "sekretaris",
+          "label": "Nama Sekretaris Lembaga",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "anggota",
+          "label": "Nama Anggota Lembaga",
+          "type": "array",
+          "required": true,
+          "example": [
+            {
+              "nama": "Drs. H. Muhsin"
+            },
+            {
+              "nama": "H. Abdul Karim"
+            }
+          ],
+          "fields": [
+            {
+              "name": "nama",
+              "label": "Nama Anggota Lembaga",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ttd": [
+    {
+      "name": "ttd_ketua",
+      "label": "Tanda Tangan Ketua IPPNU",
+      "required": true
+    },
+    {
+      "name": "ttd_sekretaris",
+      "label": "Tanda Tangan Sekretaris IPPNU",
+      "required": true
+    },
+    {
+      "name": "ttd_bendahara",
+      "label": "Tanda Tangan Bendahara",
+      "required": true
+    },
+    {
+      "name": "ttd_wakil_bend",
+      "label": "Tanda Tangan Wakil Bendahara",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_title",
+      "source": "jenis_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_sktn",
+      "source": "jenis_lembaga",
+      "transform": "abbreviate"
+    }
+  ]
+}

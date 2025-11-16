@@ -1,0 +1,305 @@
+{
+  "template": "berita_acara_formatur_pembentukan_pengurus_harian.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus harian yang dibentuk.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tingkat_lembaga",
+      "label": "Tingkat Lembaga",
+      "helpText": "Contoh: Untuk PR : Ranting, Untuk PK : Komisariat, dll.",
+      "example": "Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_penyusunan",
+      "label": "Tanggal Penyusunan Berita Acara",
+      "helpText": "Contoh: 15 Februari 2024, Tanggal penyusunan berita acara formatur pembentukan pengurus harian.",
+      "example": "15 Februari 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tempat_penyusunan",
+      "label": "Tempat Penyusunan Berita Acara",
+      "helpText": "Contoh: Aula Madrasah, Tempat penyusunan berita acara formatur pembentukan pengurus harian.",
+      "example": "Aula Madrasah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wilayah",
+      "label": "Nama Wilayah",
+      "helpText": "Contoh: Ngepeh, Macanan, Mojosari, Nama wilayah tempat penyusunan berita acara.",
+      "example": "Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Hijriah",
+      "helpText": "Contoh: 25 Safar 1445, Tanggal hijriah penyusunan berita acara formatur pembentukan pengurus harian.",
+      "example": "25 Safar 1445",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Masehi",
+      "helpText": "Contoh: 15 Februari 2024, Tanggal masehi penyusunan berita acara formatur pembentukan pengurus harian.",
+      "example": "15 Februari 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "formatur",
+      "label": "Data Tim Formatur",
+      "helpText": "Masukkan data tim formatur yang bertugas dalam pembentukan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "no": 1,
+          "nama": "Ahmad Sulaiman",
+          "jabatan": "Ketua",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "no": 2,
+          "nama": "Siti Aminah",
+          "jabatan": "Anggota",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "no": 3,
+          "nama": "Fadilatun Nafia",
+          "jabatan": "Anggota",
+          "ttd": "\\src\\templates\\ttd.png"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "no",
+          "label": "No",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "jabatan",
+          "label": "Jabatan",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "ttd",
+          "label": "Tanda Tangan Tim Formatur",
+          "type": "file",
+          "required": true 
+        }
+      ]
+    },
+    {
+      "name": "pelindung",
+      "label": "Data Pelindung",
+      "helpText": "Masukkan data pelindung dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "pembina",
+      "label": "Data Pembina",
+      "helpText": "Masukkan data pembina dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "no": 1,
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "no": 2,
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "no",
+          "label": "No",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "nama_ketua_terpilih",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Siti Fatimah, Nama lengkap ketua pengurus harian yang terpilih.",
+      "example": "Siti Fatimah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "wakil_ketua",
+      "label": "Data Wakil Ketua",
+      "helpText": "Masukkan data wakil ketua dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "title": "Wakil Ketua I",
+          "nama_wakil_ketua": "Siti Aisyah"
+        },
+        {
+          "title": "Wakil Ketua II",
+          "nama_wakil_ketua": "Fina Nuraini"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Jabatan",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama_wakil_ketua",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris Terpilih",
+      "helpText": "Contoh: Lina Marlina, Nama lengkap sekretaris pengurus harian yang terpilih.",
+      "example": "Lina Marlina",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "wakil_sekre",
+      "label": "Data Wakil Sekretaris",
+      "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "title": "Wakil Sekretaris I",
+          "nama_wakil_sekre": "Dina Safitri"
+        },
+        {
+          "title": "Wakil Sekretaris II",
+          "nama_wakil_sekre": "Rina Lestari"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Jabatan",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama_wakil_sekre",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "nama_bendahara",
+      "label": "Nama Bendahara Terpilih",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara pengurus harian yang terpilih.",
+      "example": "Fadilatun Nafia",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wakil_bend",
+      "label": "Nama Wakil Bendahara",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
+      "example": "Fadilatun Nafia",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_title",
+      "source": "jenis_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_sktn",
+      "source": "jenis_lembaga",
+      "transform": "abbreviate"
+    }
+  ]
+}

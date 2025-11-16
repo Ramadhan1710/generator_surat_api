@@ -1,0 +1,195 @@
+{
+  "template": "surat_permohonan_pengesahan.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "telepon_lembaga",
+      "label": "Nomor Telepon Lembaga",
+      "helpText": "Contoh: 08123456789",
+      "example": "08123456789",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_lembaga",
+      "label": "Alamat Lembaga",
+      "helpText": "Contoh: Ds. Macanan, Loceret, Nganjuk, Jawa Timur 64471",
+      "example": "Ds. Macanan, Loceret, Nganjuk, Jawa Timur 64471",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email_lembaga",
+      "label": "Email Lembaga",
+      "helpText": "Contoh: email@lembaga.com",
+      "example": "email@lembaga.com",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "helpText": "Contoh: Untuk PR: 01/PR/A/7455/X/II/2023, Untuk PK: 01/PK/A/7455/X/II/2023",
+      "example": "01/PR/A/7455/X/II/2023",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_rapta",
+      "label": "Tanggal Rapat Anggota",
+      "helpText": "Contoh: 1 September 2024, Tanggal rapat pemilihan pengurus baru (RAPTA) dilaksanakan.",
+      "example": "1 September 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_rapta",
+      "label": "Nomor RAPTA",
+      "helpText": "Contoh: IX, Periode RAPTA dilaksanakan.",
+      "example": "IX",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tempat_rapta",
+      "label": "Tempat Rapat Anggota",
+      "helpText": "Contoh: Aula Gedung NU, Tempat dilaksanakannya rapat pemilihan pengurus baru (RAPTA).",
+      "example": "Aula Gedung NU",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_keputusan",
+      "label": "Tanggal Keputusan",
+      "helpText": "Contoh: 1 September 2024, Tanggal keputusan hasil Tim Formatur.",
+      "example": "1 September 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Pembuatan Surat (Hijriah)",
+      "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah.",
+      "example": "1 Safar 1445",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Pembuatan Surat (Masehi)",
+      "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi.",
+      "example": "10 September 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus yang terpilih.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_ketua_terpilih",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Siti Zahro, Nama lengkap ketua terpilih dalam rapat pemilihan pengurus.",
+      "example": "Siti Zahro",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_sekretaris_terpilih",
+      "label": "Nama Sekretaris Terpilih",
+      "helpText": "Contoh: Siti Aminah, Nama lengkap sekretaris terpilih dalam rapat pemilihan pengurus.",
+      "example": "Siti Aminah",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga_induk",
+      "label": "Nama Lembaga Induk",
+      "helpText": "Contoh: PR NU Desa Ngepeh atau Kepala Madrasah, Nama lembaga induk dari lembaga yang bersangkutan.",
+      "example": "PR NU Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tingkat_lembaga",
+      "label": "Tingkat Lembaga",
+      "helpText": "Contoh: Untuk PR : Ranting, Untuk PK : Komisariat, dll.",
+      "example": "Ranting",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "ttd": [
+    {
+      "name": "ttd_ketua",
+      "label": "Tanda Tangan Ketua Terpilih",
+      "required": true
+    },
+    {
+      "name": "ttd_sekretaris",
+      "label": "Tanda Tangan Sekretaris Terpilih",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_title",
+      "source": "jenis_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_sktn",
+      "source": "jenis_lembaga",
+      "transform": "abbreviate"
+    },
+    {
+      "name": "nama_ketua_upper",
+      "source": "nama_ketua_terpilih",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_sekretaris_upper",
+      "source": "nama_sekretaris_terpilih",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_induk_title",
+      "source": "nama_lembaga_induk",
+      "transform": "titlecase"
+    }
+  ]
+}
