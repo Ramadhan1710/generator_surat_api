@@ -1,11 +1,11 @@
 import PizZip from "pizzip";
 import Docxtemplater from "docxtemplater";
 import ImageModule from "docxtemplater-image-module-free";
-import { readFile, saveFile } from "../repositories/fileRepository.js";
+import fs from "fs";
 import { format } from "../utils/format.js";
 
 export const fillDocxTemplate = (templatePath, data, typeSurat) => {
-  const content = readFile(templatePath);
+  const content = fs.readFileSync(templatePath);
 
   const zip = new PizZip(content);
 
@@ -13,7 +13,7 @@ export const fillDocxTemplate = (templatePath, data, typeSurat) => {
 
   const imageModule = new ImageModule({
     getImage: (tagValue) => {
-      return readFile(tagValue);
+      return fs.readFileSync(tagValue);
     },
     getSize: (img, tagValue) => {
       return imageSize;
