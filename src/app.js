@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import { swaggerUi, swaggerSpec } from "./config/swagger.js";
 import router from "./routes/index.js";
 
-const app = express();
+const app = express(); 
 app.use(cors());
 app.use(express.json());
 
@@ -15,7 +15,19 @@ app.use("/api", router);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+// Serve local uploads (development)
+app.use("/uploads", express.static(path.join(__dirname, "uploads"))); 
+// Serve tmp uploads on Vercel (serverless runtime uses /tmp)
+if (process.env.VERCEL) {
+	app.use("/uploads", express.static("/tmp/uploads"));
+}
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Only start server locally; on Vercel we export the app
+const PORT = process.env.PORT || 3000; 
+if (!process.env.VERCEL) {
+	app.listen(PORT, () =>
+		console.log(`Server running on http://localhost:${PORT}`)
+	);
+}
+
+export default app;

@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 export const saveFile = (fileName, buffer) => {
-    const uploadDir = path.join("src/uploads");
+    const baseDir = process.env.VERCEL ? "/tmp/uploads" : path.join("src", "uploads");
+    const uploadDir = baseDir;
     if (!fs.existsSync(uploadDir)){
         fs.mkdirSync(uploadDir, { recursive: true });
     }
