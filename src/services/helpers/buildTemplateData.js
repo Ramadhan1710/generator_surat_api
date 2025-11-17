@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import os from "os";
+import os, { type } from "os";
 import { format } from "../../utils/format.js";
 
 function buildTemplateData(config, data, files) {
@@ -11,10 +11,13 @@ function buildTemplateData(config, data, files) {
   for (const field of fields) {
     let value = data?.[field.name];
 
-    if (typeof value === "string" && field.type === "array") {
+    if (
+      (typeof value === "string" && field.type === "array") ||
+      field.type === "boolean"
+    ) {
       try {
         const parsed = JSON.parse(value);
-        // console.log("Parsed JSON for field", field.name, ":", parsed);
+        console.log("Parsed JSON for field", field.name, ":", parsed);
         value = parsed;
       } catch (error) {}
     }

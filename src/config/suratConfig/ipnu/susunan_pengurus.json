@@ -1,0 +1,519 @@
+{
+  "template": "susunan_pengurus.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_lembaga",
+      "label": "Alamat Lembaga",
+      "helpText": "Contoh: Jl. Raya Ngepeh No. 10, Desa Ngepeh, Kec. Mojosari, Kab. Mojokerto.",
+      "example": "Jl. Raya Ngepeh No. 10, Desa Ngepeh, Kec. Mojosari, Kab. Mojokerto.",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_telepon_lembaga",
+      "label": "Nomor Telepon Lembaga",
+      "helpText": "Contoh: 081234567890, Nomor telepon atau WhatsApp lembaga.",
+      "example": "081234567890",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email_lembaga",
+      "label": "Email Lembaga",
+      "helpText": "Contoh: email@lembaga.com, Alamat email lembaga.",
+      "example": "email@lembaga.com",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus harian.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "pelindung",
+      "label": "Nama-nama Pelindung",
+      "helpText": "Daftar nama-nama pelindung pengurus, beserta jabatan atau keterangannya.",
+      "type": "array",
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "required": true,
+          "type": "text"
+        }
+      ],
+      "example": [
+        {
+          "nama": "Drs. H. Abdullah Syafi'i"
+        },
+        {
+          "nama": "H. Muhammad Yusuf"
+        }
+      ]
+    },
+    {
+      "name": "pembina",
+      "label": "Data Pembina",
+      "helpText": "Masukkan data pembina dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "no": 1,
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "no": 2,
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "no",
+          "label": "No",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "nama_ketua",
+      "label": "Nama Ketua",
+      "helpText": "Contoh: Ahmad Sulaiman, Nama lengkap ketua pengurus harian.",
+      "example": "Ahmad Sulaiman",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_ketua",
+      "label": "Alamat Ketua",
+      "helpText": "Masukkan alamat ketua pengurus harian.",
+      "example": "Dusun Krajan",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "wakil_ketua",
+      "label": "Data Wakil Ketua",
+      "helpText": "Masukkan data wakil ketua dalam susunan pengurus harian.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "alamat",
+          "label": "Alamat Wakil Ketua",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "required": true,
+      "example": [
+        {
+          "title": "Wakil Ketua I",
+          "nama": "Siti Zahro",
+          "alamat": "Dusun Krajan"
+        },
+        {
+          "title": "Wakil Ketua II",
+          "nama": "Fadilatun Nafia",
+          "alamat": "Dusun Sumber"
+        }
+      ]
+    },
+    {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris",
+      "helpText": "Contoh: Faqih Almuqoddam, Nama lengkap sekretaris pengurus harian.",
+      "example": "Faqih Almuqoddam",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_sekretaris",
+      "label": "Alamat Sekretaris",
+      "helpText": "Masukkan alamat sekretaris pengurus harian.",
+      "example": "Dusun Sumber",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "wakil_sekretaris",
+      "label": "Data Wakil Sekretaris",
+      "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "alamat",
+          "label": "Alamat Wakil Sekretaris",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "required": true,
+      "example": [
+        {
+          "title": "Wakil Sekretaris I",
+          "nama": "Daffa Maulana",
+          "alamat": "Dusun Krajan"
+        }
+      ]
+    },
+    {
+      "name": "nama_bendahara",
+      "label": "Nama Bendahara",
+      "helpText": "Contoh: Lina Marlina, Nama lengkap bendahara pengurus harian.",
+      "example": "Lina Marlina",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_bendahara",
+      "label": "Alamat Bendahara",
+      "helpText": "Masukkan alamat bendahara pengurus harian.",
+      "example": "Dusun Sumber",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wakil_bendahara",
+      "label": "Nama Wakil Bendahara",
+      "helpText": "Contoh: Rina Lestari, Nama lengkap wakil bendahara pengurus harian.",
+      "example": "Rina Lestari",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_wakil_bendahara",
+      "label": "Alamat Wakil Bendahara",
+      "helpText": "Masukkan alamat wakil bendahara pengurus harian.",
+      "example": "Dusun Krajan",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "departemen",
+      "label": "Data Departemen",
+      "helpText": "Masukkan data departemen dalam susunan pengurus harian.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Departemen",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "koordinator",
+          "label": "Nama Koordinator",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "alamat_koordinator",
+          "label": "Alamat Koordinator",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "anggota",
+          "label": "Data Anggota Departemen",
+          "type": "array",
+          "required": true,
+          "fields": [
+            {
+              "name": "nama",
+              "label": "Nama Anggota",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "alamat",
+              "label": "Alamat Anggota",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "example": [
+        {
+          "nama": "Departemen Pendidikan dan Kaderisasi",
+          "koordinator": "Ahmad Sulaiman",
+          "alamat_koordinator": "Dusun Krajan",
+          "anggota": [
+            {
+              "nama": "Daffa Maulana",
+              "alamat": "Dusun Krajan"
+            },
+            {
+              "nama": "Fadilatun Nafia",
+              "alamat": "Dusun Sumber"
+            }
+          ]
+        }
+      ],
+      "required": true
+    },
+    {
+      "name": "lembaga",
+      "label": "Data lembaga-lembaga pendukung",
+      "helpText": "Masukkan data lembaga-lembaga pendukung dalam susunan pengurus harian.",
+      "type": "array",
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lembaga",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "direktur",
+          "label": "Nama Direktur",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "alamat_direktur",
+          "label": "Alamat Direktur",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "sekretaris",
+          "label": "Nama Sekretaris",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "name": "alamat_sekretaris",
+          "label": "Alamat Sekretaris",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "name": "anggota",
+          "label": "Data Anggota Lembaga",
+          "type": "array",
+          "required": true,
+          "fields": [
+            {
+              "name": "nama",
+              "label": "Nama Anggota",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "alamat",
+              "label": "Alamat Anggota",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "example": [
+        {
+          "nama": "Lembaga Pers dan Penerbitan",
+          "direktur": "Ahmad Sulaiman",
+          "alamat_direktur": "Dusun Krajan",
+          "sekretaris": "Faqih Almuqoddam",
+          "alamat_sekretaris": "Dusun Sumber",
+          "anggota": [
+            {
+              "nama": "Lina Marlina",
+              "alamat": "Dusun Sumber"
+            },
+            {
+              "nama": "Daffa Maulana",
+              "alamat": "Dusun Krajan"
+            }
+          ]
+        },
+        {
+          "nama": "Lembaga Sosial dan Kemasyarakatan",
+          "direktur": "Fadilatun Nafia",
+          "alamat_direktur": "Dusun Sumber",
+          "sekretaris": "Rina Lestari",
+          "alamat_sekretaris": "Dusun Krajan",
+          "anggota": [
+            {
+              "nama": "Ahmad Sulaiman",
+              "alamat": "Dusun Krajan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hasLembagaCBP",
+      "label": "Lembaga Corp Brigade Pembangunan",
+      "helpText": "Masukkan data lembaga CBP dalam susunan pengurus harian.",
+      "type": "boolean",
+      "required": false,
+      "example": true
+    },
+    {
+      "name": "komandan",
+      "label": "Nama Komandan CBP",
+      "helpText": "Contoh: Ahmad Sulaiman, Nama lengkap komandan CBP.",
+      "example": "Ahmad Sulaiman",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "alamat_komandan",
+      "label": "Alamat Komandan CBP",
+      "helpText": "Masukkan alamat komandan CBP.",
+      "example": "Dusun Krajan",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "wakil_komandan",
+      "label": "Nama Wakil Komandan CBP",
+      "helpText": "Contoh: Faqih Almuqoddam, Nama lengkap wakil komandan CBP.",
+      "example": "Faqih Almuqoddam",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "alamat_wakil_komandan",
+      "label": "Alamat Wakil Komandan CBP",
+      "helpText": "Masukkan alamat wakil komandan CBP.",
+      "example": "Dusun Sumber",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "hasDivisi",
+      "label": "Divisi CBP",
+      "helpText": "Apakah terdapat divisi dalam CBP?",
+      "type": "boolean",
+      "required": false,
+      "example": true
+    },
+    {
+      "name": "divisi",
+      "label": "Data Divisi CBP",
+      "helpText": "Masukkan data divisi dalam CBP.",
+      "type": "array",
+      "required": false,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Divisi",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "koordinator",
+          "label": "Nama Koordinator Divisi",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "alamat_koordinator",
+          "label": "Alamat Koordinator Divisi",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "anggota",
+          "label": "Data Anggota Divisi",
+          "type": "array",
+          "required": false,
+          "fields": [
+            {
+              "name": "nama",
+              "label": "Nama Anggota",
+              "type": "text",
+              "required": false
+            },
+            {
+              "name": "alamat",
+              "label": "Alamat Anggota",
+              "type": "text",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "example": [
+        {
+          "nama": "Divisi Pelatihan",
+          "koordinator": "Lina Marlina",
+          "alamat_koordinator": "Dusun Sumber",
+          "anggota": [
+            {
+              "nama": "Rina Lestari",
+              "alamat": "Dusun Krajan"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    }
+  ]
+}

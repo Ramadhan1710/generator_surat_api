@@ -8,7 +8,8 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 const suratTypes = [
     "surat-permohonan-pengesahan",
-    "berita-acara-pemilihan",
+    "berita-acara-pemilihan-ketua",
+    "berita-acara-rapat-formatur",
     "surat-keputusan",
     "susunan-pengurus",
     "kartu-identitas",

@@ -1,0 +1,208 @@
+{
+  "template": "surat_keputusan.docx",
+  "fields": [
+    {
+      "name": "periode_rapta",
+      "label": "Periode RAPTA",
+      "helpText": "Contoh: IX, Periode rapat pemilihan pengurus baru (RAPTA).",
+      "example": "IX",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "helpText": "Contoh: 06/Rapta/IX/IPNU/I/2023",
+      "example": "06/Rapta/IX/IPNU/I/2023",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting (PR) atau Pimpinan Komisariat (PK).",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus baru hasil RAPTA.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ketua_terpilih",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Ahmad Sulaiman, Nama ketua terpilih hasil RAPTA.",
+      "example": "Ahmad Sulaiman",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wilayah",
+      "label": "Nama Wilayah Penetapan",
+      "helpText": "Contoh: Ngepeh, Macanan, Mojosari, Nama wilayah tempat penetapan surat keputusan.",
+      "example": "Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Hijriah Penetapan",
+      "helpText": "Contoh: 15 Ramadan 1445 H, Tanggal penetapan surat keputusan dalam kalender Hijriah.",
+      "example": "15 Ramadan 1445 H",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Masehi Penetapan",
+      "helpText": "Contoh: 27 Maret 2024, Tanggal penetapan surat keputusan dalam kalender Masehi.",
+      "example": "27 Maret 2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "waktu_penetapan",
+      "label": "Waktu Penetapan",
+      "helpText": "Contoh: 14.00, Waktu penetapan Surat Keputusan RAPTA.",
+      "example": "14.00",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_ketua",
+      "label": "Nama Ketua Sidang",
+      "helpText": "Contoh: Ahmad Kadafi, Nama lengkap ketua Sidang RAPTA.",
+      "example": "Ahmad Kadafi",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttd_ketua",
+      "label": "Tanda tangan Ketua Sidang",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris Sidang",
+      "helpText": "Contoh: Faqih Almuqoddam, Nama lengkap sekretaris sidang RAPTA.",
+      "example": "Faqih Almuqoddam",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttd_sekretaris",
+      "label": "Tanda tangan Sekretaris Sidang",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "nama_anggota",
+      "label": "Nama Anggota Sidang",
+      "helpText": "Contoh: Ahmad Sulaiman, Nama lengkap anggota sidang RAPTA.",
+      "example": "Ahmad Sulaiman",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttd_anggota",
+      "label": "Tanda tangan Anggota Sidang",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "tim_formatur",
+      "label": "Tim Formatur",
+      "helpText": "Data lengkap tim formatur hasil RAPTA.",
+      "type": "array",
+      "required": true,
+      "fields": [
+        {
+          "name": "no",
+          "label": "No",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "daerah_pengkaderan",
+          "label": "Daerah Pengkaderan",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "example": [
+        {
+          "no": 1,
+          "nama": "Ahmad Kadafi",
+          "daerah_pengkaderan": "Ketua Tim Formatur"
+        },
+        {
+          "no": 2,
+          "nama": "Faqih Almuqoddam",
+          "daerah_pengkaderan": "Ketua Domisioner"
+        },
+        {
+          "no": 3,
+          "nama": "Sulaiman Harun",
+          "daerah_pengkaderan": "Zona 1"
+        },
+        {
+          "no": 4,
+          "nama": "Fadilatun Nafia",
+          "daerah_pengkaderan": "Zona 2"
+        },
+        {
+          "no": 5,
+          "nama": "Siti Zahro",
+          "daerah_pengkaderan": "Zona 3"
+        }
+      ]
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_title",
+      "source": "jenis_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "jenis_lembaga_sktn",
+      "source": "jenis_lembaga",
+      "transform": "abbreviate"
+    }
+  ]
+}

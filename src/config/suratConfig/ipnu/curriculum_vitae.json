@@ -1,0 +1,391 @@
+{
+  "template": "curriculum_vitae.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting, Pimpinan Komisariat, dll.",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_kepengurusan",
+      "label": "Periode Kepengurusan",
+      "helpText": "Contoh: 2024-2026, Periode kepengurusan pengurus harian yang dibentuk.",
+      "example": "2024-2026",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_ketua",
+      "label": "Nama Ketua",
+      "helpText": "Contoh: Ahmad Sulaiman, Nama ketua pengurus harian.",
+      "example": "Ahmad Sulaiman",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttl_ketua",
+      "label": "Tempat Tanggal Lahir Ketua",
+      "helpText": "Contoh: Mojosari, 10 Januari 2000, Tempat dan tanggal lahir ketua pengurus harian.",
+      "example": "Mojosari, 10 Januari 2000",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nia_ketua",
+      "label": "Nomor Induk Anggota (NIA) Ketua",
+      "helpText": "Contoh: 1234567890, Nomor Induk Anggota (NIA) ketua pengurus harian.",
+      "example": "1234567890",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_ketua",
+      "label": "Alamat Ketua",
+      "helpText": "Contoh: Jl. Merpati No. 10, Mojosari, Alamat ketua pengurus harian.",
+      "example": "Jl. Merpati No. 10, Mojosari",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "motto_ketua",
+      "label": "Motto Ketua",
+      "helpText": "Contoh: Hidup untuk memberi manfaat bagi sesama, Motto hidup ketua pengurus harian.",
+      "example": "Hidup untuk memberi manfaat bagi sesama",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_hp_ketua",
+      "label": "Nomor handphone Ketua",
+      "helpText": "Contoh: 081234567890, Nomor handphone ketua pengurus harian.",
+      "example": "081234567890",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email_ketua",
+      "label": "Email Ketua",
+      "helpText": "Contoh: ahmad@example.com, Email ketua pengurus harian.",
+      "example": "ahmad@example.com",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "no_organization_ketua",
+      "label": "Pengalaman Organisasi Ketua?",
+      "helpText": "Apakah ketua memiliki pengalaman organisasi sebelumnya?",
+      "example": "Ya",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "organisasi_ketua",
+      "label": "Pengalaman Organisasi Ketua",
+      "helpText": "Sebutkan pengalaman organisasi yang pernah diikuti oleh ketua.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Ketua Osis SMA Negeri 1 Mojosari"
+        },
+        {
+          "nama": "Anggota PMR SMA Negeri 1 Mojosari"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Organisasi",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "pendidikan_ketua",
+      "label": "Pendidikan Terakhir Ketua",
+      "helpText": "Masukkan pendidikan terakhir ketua pengurus harian.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "tingkat_pendidikan",
+          "label": "Tingkat Pendidikan Terakhir",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama_pendidikan",
+          "label": "Nama Institusi Pendidikan",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "example": [
+        {
+          "tingkat_lembaga": "SMA",
+          "nama_lembaga": "SMA Negeri 1 Mojosari"
+        },
+        {
+          "tingkat_lembaga": "S1",
+          "nama_lembaga": "Universitas Negeri Malang"
+        }
+      ]
+    },
+    {
+      "name": "foto_ketua",
+      "label": "Foto Ketua",
+      "helpText": "Unggah foto ketua pengurus harian dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris",
+      "helpText": "Contoh: Siti Nurhaliza, Nama sekretaris pengurus harian.",
+      "example": "Siti Nurhaliza",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttl_sekretaris",
+      "label": "Tempat Tanggal Lahir Sekretaris",
+      "helpText": "Contoh: Mojokerto, 12 Februari 2001.",
+      "example": "Mojokerto, 12 Februari 2001",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nia_sekretaris",
+      "label": "Nomor Induk Anggota (NIA) Sekretaris",
+      "helpText": "Contoh: 0987654321.",
+      "example": "0987654321",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_sekretaris",
+      "label": "Alamat Sekretaris",
+      "helpText": "Contoh: Jl. Kenari No. 5, Mojokerto.",
+      "example": "Jl. Kenari No. 5, Mojokerto",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "motto_sekretaris",
+      "label": "Motto Sekretaris",
+      "helpText": "Contoh: Disiplin adalah kunci kesuksesan.",
+      "example": "Disiplin adalah kunci kesuksesan",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_hp_sekretaris",
+      "label": "Nomor Handphone Sekretaris",
+      "helpText": "Contoh: 081234567891.",
+      "example": "081234567891",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email_sekretaris",
+      "label": "Email Sekretaris",
+      "helpText": "Contoh: siti@example.com.",
+      "example": "siti@example.com",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "no_organization_sekretaris",
+      "label": "Pengalaman Organisasi Sekretaris?",
+      "helpText": "Apakah sekretaris memiliki pengalaman organisasi sebelumnya?",
+      "example": "Ya",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "organisasi_sekretaris",
+      "label": "Pengalaman Organisasi Sekretaris",
+      "helpText": "Sebutkan pengalaman organisasi yang pernah diikuti sekretaris.",
+      "type": "array",
+      "example": [{ "nama": "Sekretaris OSIS SMA Negeri 2 Mojokerto" }],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Organisasi",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "pendidikan_sekretaris",
+      "label": "Pendidikan Terakhir Sekretaris",
+      "helpText": "Masukkan pendidikan terakhir sekretaris.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "tingkat_pendidikan",
+          "label": "Tingkat Pendidikan Terakhir",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama_pendidikan",
+          "label": "Nama Institusi Pendidikan",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "example": [
+        {
+          "tingkat_pendidikan": "SMA",
+          "nama_pendidikan": "SMA Negeri 2 Mojokerto"
+        }
+      ]
+    },
+    {
+      "name": "foto_sekre",
+      "label": "Foto Sekretaris",
+      "helpText": "Unggah foto sekretaris dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "nama_bendahara",
+      "label": "Nama Bendahara",
+      "helpText": "Contoh: Rudi Hartono.",
+      "example": "Rudi Hartono",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttl_bendahara",
+      "label": "Tempat Tanggal Lahir Bendahara",
+      "helpText": "Contoh: Pasuruan, 8 Maret 1999.",
+      "example": "Pasuruan, 8 Maret 1999",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nia_bendahara",
+      "label": "Nomor Induk Anggota (NIA) Bendahara",
+      "helpText": "Contoh: 5678901234.",
+      "example": "5678901234",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "alamat_bendahara",
+      "label": "Alamat Bendahara",
+      "helpText": "Contoh: Jl. Cendrawasih No. 7, Pasuruan.",
+      "example": "Jl. Cendrawasih No. 7, Pasuruan",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "motto_bendahara",
+      "label": "Motto Bendahara",
+      "helpText": "Contoh: Kejujuran adalah investasi terbaik.",
+      "example": "Kejujuran adalah investasi terbaik",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nomor_hp_bendahara",
+      "label": "Nomor Handphone Bendahara",
+      "helpText": "Contoh: 081234567892.",
+      "example": "081234567892",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email_bendahara",
+      "label": "Email Bendahara",
+      "helpText": "Contoh: rudi@example.com.",
+      "example": "rudi@example.com",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "no_organization_bendahara",
+      "label": "Pengalaman Organisasi Bendahara?",
+      "helpText": "Apakah bendahara memiliki pengalaman organisasi sebelumnya?",
+      "example": "Ya",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "organisasi_bendahara",
+      "label": "Pengalaman Organisasi Bendahara",
+      "helpText": "Sebutkan pengalaman organisasi yang pernah diikuti bendahara.",
+      "type": "array",
+      "example": [{ "nama": "Bendahara Karang Taruna Desa" }],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Organisasi",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "pendidikan_bendahara",
+      "label": "Pendidikan Terakhir Bendahara",
+      "helpText": "Masukkan pendidikan terakhir bendahara.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "tingkat_pendidikan",
+          "label": "Tingkat Pendidikan Terakhir",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nama_pendidikan",
+          "label": "Nama Institusi Pendidikan",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "example": [
+        {
+          "tingkat_pendidikan": "D3",
+          "nama_pendidikan": "Politeknik Negeri Malang"
+        }
+      ]
+    },
+    {
+      "name": "foto_bend",
+      "label": "Foto Bendahara",
+      "helpText": "Unggah foto bendahara dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    }
+  ]
+}

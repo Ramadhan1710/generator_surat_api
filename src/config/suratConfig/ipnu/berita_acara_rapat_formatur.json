@@ -1,0 +1,244 @@
+{
+  "template": "berita_acara_rapat_formatur.docx",
+  "fields": [
+    {
+      "name": "jenis_lembaga",
+      "label": "Jenis Lembaga",
+      "helpText": "Contoh: Pimpinan Ranting (PR) atau Pimpinan Komisariat (PK).",
+      "example": "Pimpinan Ranting",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_lembaga",
+      "label": "Nama Lembaga",
+      "helpText": "Contoh: Desa Ngepeh, Madrasah Aliyah Nahdlatul Ulama, dll.",
+      "example": "Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal",
+      "label": "Tanggal Rapat",
+      "helpText": "Contoh: 15, Tanggal pelaksanaan rapat formatur.",
+      "example": "15 ",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "bulan",
+      "label": "Bulan Rapat",
+      "helpText": "Contoh: Januari, Bulan pelaksanaan rapat formatur.",
+      "example": "Januari",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tahun",
+      "label": "Tahun Rapat",
+      "helpText": "Contoh: 2024, Tahun pelaksanaan rapat formatur.",
+      "example": "2024",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tempat_rapat",
+      "label": "Tempat Rapat",
+      "helpText": "Contoh: Aula Desa Ngepeh, Lokasi pelaksanaan rapat formatur.",
+      "example": "Aula Desa Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "periode_rapta",
+      "label": "Periode RAPTA",
+      "helpText": "Contoh: IX, Periode rapat pemilihan pengurus baru (RAPTA).",
+      "example": "IX",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wilayah",
+      "label": "Nama Wilayah Penetapan",
+      "helpText": "Contoh: Ngepeh, Macanan, Mojosari, Nama wilayah tempat penetapan berita acara rapat formatur.",
+      "example": "Ngepeh",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "tanggal_rapat",
+      "label": "Tanggal penetapan",
+      "helpText": "Contoh: 20 Januari 2023, Tanggal penetapan berita acara rapat formatur.",
+      "example": "20 Januari 2023",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttd_ketua_terpilih",
+      "label": "Tanda Tangan Ketua Terpilih",
+      "helpText": "Unggah gambar tanda tangan ketua terpilih dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "nama_ketua_terpilih",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Ahmad Sulaiman, Nama ketua terpilih hasil RAPTA.",
+      "example": "Ahmad Sulaiman",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "ttd_ketua_demisioner",
+      "label": "Tanda Tangan Ketua Demisioner",
+      "helpText": "Unggah gambar tanda tangan ketua demisioner dalam format .jpg atau .png.",
+      "type": "file",
+      "required": true
+    },
+    {
+      "name": "nama_ketua_demisioner",
+      "label": "Nama Ketua Demisioner",
+      "helpText": "Contoh: Budi Santoso, Nama ketua demisioner sebelum RAPTA.",
+      "example": "Budi Santoso",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "hasAnggota1",
+      "label": "Anggota Formatur 1",
+      "type": "boolean",
+      "required": true,
+      "helpText": "Apakah ada anggota formatur tambahan pertama?",
+      "example": true
+    },
+    {
+      "name": "ttd_anggota1",
+      "label": "Tanda Tangan Anggota Formatur 1",
+      "helpText": "Unggah gambar tanda tangan anggota formatur pertama dalam format .jpg atau .png.",
+      "type": "file",
+      "required": false
+    },
+    {
+      "name": "nama_anggota1",
+      "label": "Nama Anggota Formatur 1",
+      "helpText": "Contoh: Faqih Almuqoddam, Nama anggota formatur pertama.",
+      "example": "Faqih Almuqoddam",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "hasAnggota2",
+      "label": "Anggota Formatur 2",
+      "type": "boolean",
+      "required": true,
+      "helpText": "Apakah ada anggota formatur tambahan kedua?",
+      "example": true
+    },
+    {
+      "name": "ttd_anggota2",
+      "label": "Tanda Tangan Anggota Formatur 2",
+      "helpText": "Unggah gambar tanda tangan anggota formatur kedua dalam format .jpg atau .png.",
+      "type": "file",
+      "required": false
+    },
+    {
+      "name": "nama_anggota2",
+      "label": "Nama Anggota Formatur 2",
+      "helpText": "Contoh: Ahmad Kadafi, Nama anggota formatur kedua.",
+      "example": "Ahmad Kadafi",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "hasAnggota3",
+      "label": "Anggota Formatur 3",
+      "type": "boolean",
+      "required": true,
+      "helpText": "Apakah ada anggota formatur tambahan ketiga?",
+      "example": true
+    },
+    {
+      "name": "ttd_anggota3",
+      "label": "Tanda Tangan Anggota Formatur 3",
+      "helpText": "Unggah gambar tanda tangan anggota formatur ketiga dalam format .jpg atau .png.",
+      "type": "file",
+      "required": false
+    },
+    {
+      "name": "nama_anggota3",
+      "label": "Nama Anggota Formatur 3",
+      "helpText": "Contoh: Rina Lestari, Nama anggota formatur ketiga.",
+      "example": "Rina Lestari",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "hasAnggota4",
+      "label": "Anggota Formatur 4",
+      "type": "boolean",
+      "required": true,
+      "helpText": "Apakah ada anggota formatur tambahan keempat?",
+      "example": true
+    },
+    {
+      "name": "ttd_anggota4",
+      "label": "Tanda Tangan Anggota Formatur 4",
+      "helpText": "Unggah gambar tanda tangan anggota formatur keempat dalam format .jpg atau .png.",
+      "type": "file",
+      "required": false
+    },
+    {
+      "name": "nama_anggota4",
+      "label": "Nama Anggota Formatur 4",
+      "helpText": "Contoh: Dina Marlina, Nama anggota formatur keempat.",
+      "example": "Dina Marlina",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "hasAnggota5",
+      "label": "Anggota Formatur 5",
+      "type": "boolean",
+      "required": true,
+      "helpText": "Apakah ada anggota formatur tambahan kelima?",
+      "example": true
+    },
+    {
+      "name": "ttd_anggota5",
+      "label": "Tanda Tangan Anggota Formatur 5",
+      "helpText": "Unggah gambar tanda tangan anggota formatur kelima dalam format .jpg atau .png.",
+      "type": "file",
+      "required": false
+    },
+    {
+      "name": "nama_anggota5",
+      "label": "Nama Anggota Formatur 5",
+      "helpText": "Contoh: Sulaiman Harun, Nama anggota formatur kelima.",
+      "example": "Sulaiman Harun",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "computedFields": [
+    {
+      "name": "jenis_lembaga_upper",
+      "source": "jenis_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "jenis_lembaga_title",
+      "source": "jenis_lembaga",
+      "transform": "titlecase"
+    },
+    {
+      "name": "nama_lembaga_upper",
+      "source": "nama_lembaga",
+      "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
+    }
+  ]
+}
