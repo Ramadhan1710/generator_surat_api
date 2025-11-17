@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.use('/surat/ipnu', ipnuRoutes);
 router.use('/surat/ippnu', ippnuRoutes);
-router.get('/surat', suratRoutes);
+router.use('/surat', suratRoutes);
 
 export default router;
