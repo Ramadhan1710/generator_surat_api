@@ -9,6 +9,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Ping endpoint for health check and keep-alive
+app.get("/", (req, res) => {
+  res.status(200).json({ 
+    status: "ok",
+    message: "Server is running",
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/api", router);

@@ -1,0 +1,14 @@
+name: Keep Alive
+
+on:
+  schedule:
+    # Ping setiap 10 menit
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping server
+        run: curl -f https://generator-surat-api.onrender.com/ || exit 1
