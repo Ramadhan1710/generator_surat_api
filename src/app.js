@@ -9,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root test endpoint
 app.get("/", (req, res) => {
   res.status(200).json({ 
     status: "ok",
@@ -17,25 +18,24 @@ app.get("/", (req, res) => {
   });
 });
 
+// Swagger docs
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+// App routes
 app.use("/api", router);
 
+// Resolve __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-// Serve local uploads (development)
-app.use("/uploads", express.static(path.join(__dirname, "uploads"))); 
-// Serve tmp uploads on Vercel (serverless runtime uses /tmp)
-if (process.env.VERCEL) {
-	app.use("/uploads", express.static("/tmp/uploads"));
-}
 
-// Only start server locally; on Vercel we export the app
-const PORT = process.env.PORT || 3000; 
-if (!process.env.VERCEL) {
-	app.listen(PORT, () =>
-		console.log(`Server running on http://localhost:${PORT}`)
-	);
-}
+// (Uploads disabled) — remove unnecessary static folders
+// If someday needed, you can enable it again
+
+// Start server normally (for any platform including Fly.io)
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 export default app;
