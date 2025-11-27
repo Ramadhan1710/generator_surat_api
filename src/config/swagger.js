@@ -209,6 +209,10 @@ const options = {
         description: "Production server",
       },
       {
+        url: "https://generator-surat-api.fly.dev",
+        description: "Production server V2",
+      },
+      {
         url: "http://localhost:3000",
         description: "Development server",
       },
