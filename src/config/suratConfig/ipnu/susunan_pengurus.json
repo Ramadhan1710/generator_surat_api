@@ -50,27 +50,44 @@
       "required": true
     },
     {
-      "name": "pelindung",
-      "label": "Nama-nama Pelindung",
-      "helpText": "Daftar nama-nama pelindung pengurus, beserta jabatan atau keterangannya.",
-      "type": "array",
+      "name": "isRanting",
+      "label": "Apakah Lembaga Ranting?",
+      "helpText": "Tandai jika lembaga yang dimaksud adalah Pimpinan Ranting.",
+      "type": "boolean",
       "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "required": true,
-          "type": "text"
-        }
-      ],
-      "example": [
-        {
-          "nama": "Drs. H. Abdullah Syafi'i"
-        },
-        {
-          "nama": "H. Muhammad Yusuf"
-        }
-      ]
+      "example": true
+    },
+    {
+      "name": "nama_rois_syuriyah",
+      "label": "Nama Rois Syuriyah",
+      "helpText": "Contoh: KH. Ahmad Dahlan, Nama lengkap rois syuriyah PRNU.",
+      "example": "KH. Ahmad Dahlan",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "nama_ketua_tanfidziyah",
+      "label": "Nama Ketua Tanfidziyah PRNU",
+      "helpText": "Contoh: Drs. H. Muhsin, Nama lengkap ketua tanfidziyah PRNU.",
+      "example": "Drs. H. Muhsin",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "isKomisariat",
+      "label": "Apakah Lembaga Komisariat?",
+      "helpText": "Tandai jika lembaga yang dimaksud adalah Pimpinan Komisariat.",
+      "type": "boolean",
+      "required": true,
+      "example": false
+    },
+    {
+      "name": "nama_kepala_madrasah",
+      "label": "Nama Kepala Madrasah",
+      "helpText": "Contoh: Drs. H. Muhsin, Nama lengkap kepala madrasah tempat komisariat berada.",
+      "example": "Drs. H. Muhsin",
+      "type": "text",
+      "required": false
     },
     {
       "name": "pembina",
@@ -175,7 +192,7 @@
       "required": true
     },
     {
-      "name": "wakil_sekretaris",
+      "name": "wakil_sekre",
       "label": "Data Wakil Sekretaris",
       "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
       "type": "array",
@@ -184,22 +201,22 @@
           "name": "title",
           "label": "Title",
           "type": "text",
-          "required": true
+          "required": false
         },
         {
           "name": "nama",
           "label": "Nama Lengkap",
           "type": "text",
-          "required": true
+          "required": false
         },
         {
           "name": "alamat",
           "label": "Alamat Wakil Sekretaris",
           "type": "text",
-          "required": true
+          "required": false
         }
       ],
-      "required": true,
+      "required": false,
       "example": [
         {
           "title": "Wakil Sekretaris I",
@@ -225,20 +242,20 @@
       "required": true
     },
     {
-      "name": "nama_wakil_bendahara",
+      "name": "nama_wakil_bend",
       "label": "Nama Wakil Bendahara",
       "helpText": "Contoh: Rina Lestari, Nama lengkap wakil bendahara pengurus harian.",
       "example": "Rina Lestari",
       "type": "text",
-      "required": true
+      "required": false
     },
     {
-      "name": "alamat_wakil_bendahara",
+      "name": "alamat_wakil_bend",
       "label": "Alamat Wakil Bendahara",
       "helpText": "Masukkan alamat wakil bendahara pengurus harian.",
       "example": "Dusun Krajan",
       "type": "text",
-      "required": true
+      "required": false
     },
     {
       "name": "departemen",
@@ -287,7 +304,7 @@
       ],
       "example": [
         {
-          "nama": "Departemen Pendidikan dan Kaderisasi",
+          "nama": "Pendidikan dan Kaderisasi",
           "koordinator": "Ahmad Sulaiman",
           "alamat_koordinator": "Dusun Krajan",
           "anggota": [
@@ -364,7 +381,7 @@
       ],
       "example": [
         {
-          "nama": "Lembaga Pers dan Penerbitan",
+          "nama": "Pers dan Penerbitan",
           "direktur": "Ahmad Sulaiman",
           "alamat_direktur": "Dusun Krajan",
           "sekretaris": "Faqih Almuqoddam",
@@ -381,7 +398,7 @@
           ]
         },
         {
-          "nama": "Lembaga Sosial dan Kemasyarakatan",
+          "nama": "Sosial dan Kemasyarakatan",
           "direktur": "Fadilatun Nafia",
           "alamat_direktur": "Dusun Sumber",
           "sekretaris": "Rina Lestari",
@@ -514,6 +531,11 @@
       "name": "nama_lembaga_upper",
       "source": "nama_lembaga",
       "transform": "uppercase"
+    },
+    {
+      "name": "nama_lembaga_title",
+      "source": "nama_lembaga",
+      "transform": "titlecase"
     }
   ]
 }

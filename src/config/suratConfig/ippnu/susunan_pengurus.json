@@ -51,33 +51,25 @@
     },
     {
       "name": "nama_ketua",
-      "label": "Nama Ketua IPPNU",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap ketua IPPNU wilayah terkait.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "nama_sekretaris",
-      "label": "Nama Sekretaris IPPNU",
-      "helpText": "Contoh: Lina Marlina, Nama lengkap sekretaris IPPNU wilayah terkait.",
-      "example": "Lina Marlina",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Siti Fatimah, Nama lengkap ketua terpilih pengurus harian.",
+      "example": "Siti Fatimah",
       "type": "text",
       "required": true
     },
     {
       "name": "wakil_ketua",
-      "label": "Data Wakil Ketua",
-      "helpText": "Masukkan data wakil ketua dalam susunan pengurus harian.",
+      "label": "Nama-nama Wakil Ketua Terpilih",
+      "helpText": "Masukkan data wakil ketua terpilih dalam susunan pengurus harian.",
       "type": "array",
       "example": [
         {
           "title": "Wakil Ketua I",
-          "nama": "Siti Zahro"
+          "nama": "Dina Safitri"
         },
         {
           "title": "Wakil Ketua II",
-          "nama": "Fadilatun Nafia"
+          "nama": "Lina Marlina"
         }
       ],
       "required": true,
@@ -97,227 +89,125 @@
       ]
     },
     {
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris Terpilih",
+      "helpText": "Contoh: Lina Marlina, Nama lengkap sekretaris pengurus harian yang terpilih.",
+      "example": "Lina Marlina",
+      "type": "text",
+      "required": true
+    },
+    {
       "name": "wakil_sekre",
-      "label": "Data Wakil Sekretaris",
-      "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
+      "label": "Nama-nama Wakil Sekretaris Terpilih",
+      "helpText": "Masukkan data wakil sekretaris terpilih dalam susunan pengurus harian.",
       "type": "array",
       "example": [
         {
           "title": "Wakil Sekretaris I",
-          "nama": "Siti Zahro"
+          "nama": "Dina Safitri"
         },
         {
           "title": "Wakil Sekretaris II",
-          "nama": "Fadilatun Nafia"
+          "nama": "Lina Marlina"
         }
       ],
-      "required": true,
+      "required": false,
       "fields": [
         {
           "name": "title",
           "label": "Jabatan",
           "type": "text",
-          "required": true
+          "required": false
         },
         {
           "name": "nama",
           "label": "Nama Lengkap",
           "type": "text",
-          "required": true
+          "required": false
         }
       ]
     },
     {
       "name": "nama_bendahara",
-      "label": "Nama Bendahara",
-      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara pengurus harian yang terpilih.",
+      "label": "Nama Bendahara Terpilih",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara  pengurus harian yang terpilih.",
       "example": "Fadilatun Nafia",
       "type": "text",
       "required": true
     },
     {
       "name": "nama_wakil_bend",
-      "label": "Nama Wakil Bendahara",
-      "helpText": "Contoh: Rina Lestari, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
-      "example": "Rina Lestari",
+      "label": "Nama Wakil Bendahara Terpilih",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
+      "example": "Fadilatun Nafia",
       "type": "text",
-      "required": true
+      "required": false
     },
     {
-      "name": "pelindung",
-      "label": "Data Pelindung",
-      "helpText": "Masukkan data pelindung dalam susunan pengurus harian.",
+      "name": "departemen",
+      "label": "Data Departemen-Departemen",
+      "helpText": "Masukkan data departemen beserta koordinator dan anggotanya.",
       "type": "array",
       "example": [
         {
-          "nama": "Drs. H. Muhsin"
+          "nama_departemen": "Pengembangan Organisasi",
+          "koordinator": "Siti Aminah",
+          "anggota": [
+            { "nama": "Drs. H. Muhsin" },
+            { "nama": "H. Abdul Karim" }
+          ]
         },
         {
-          "nama": "H. Abdul Karim"
+          "nama_departemen": "Pendidikan, Pengkaderan, dan Pengembangan SDM",
+          "koordinator": "Lina Marlina",
+          "anggota": [
+            { "nama": "Fadilatun Nafia" },
+            { "nama": "Siti Aisyah" }
+          ]
+        },
+        {
+          "nama_departemen": "Dakwah dan Sosial Kemasyarakatan",
+          "koordinator": "Dina Safitri",
+          "anggota": [
+            { "nama": "Rina Lestari" }
+          ]
+        },
+        {
+          "nama_departemen": "Olahraga dan Budaya",
+          "koordinator": "Fina Nuraini",
+          "anggota": [
+            { "nama": "Ahmad Sulaiman" }
+          ]
         }
       ],
       "required": true,
       "fields": [
         {
-          "name": "nama",
-          "label": "Nama Lengkap",
+          "name": "nama_departemen",
+          "label": "Nama Departemen",
+          "helpText": "Contoh: Pengembangan Organisasi, Pendidikan Pengkaderan dan Pengembangan SDM, dll.",
           "type": "text",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "pembina",
-      "label": "Data Pembina",
-      "helpText": "Masukkan data pembina dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "no": 1,
-          "nama": "Drs. H. Muhsin"
-        },
-        {
-          "no": 2,
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "no",
-          "label": "No",
-          "type": "number",
           "required": true
         },
         {
-          "name": "nama",
-          "label": "Nama Lengkap",
+          "name": "koordinator",
+          "label": "Nama Koordinator",
           "type": "text",
           "required": true
-        }
-      ]
-    },
-    {
-      "name": "koordinator_po",
-      "label": "Nama Koordinator Departemen Pengembangan Organisasi",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen pengembangan organisasi.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "anggota_po",
-      "label": "Data Anggota Departemen Pengembangan Organisasi",
-      "helpText": "Masukkan data anggota departemen pengembangan organisasi dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "nama": "Drs. H. Muhsin"
         },
         {
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "type": "text",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "koordinator_ppps",
-      "label": "Nama Koordinator Departemen Pendidikan, Pengkaderan, dan Pengembangan SDM",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen pendidikan, pengkaderan, dan pengembangan SDM.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "anggota_ppps",
-      "label": "Data Anggota Departemen Pendidikan, Pengkaderan, dan Pengembangan SDM",
-      "helpText": "Masukkan data anggota departemen pendidikan, pengkaderan, dan pengembangan SDM dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "nama": "Drs. H. Muhsin"
-        },
-        {
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "type": "text",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "koordinator_dsk",
-      "label": "Nama Koordinator Departemen Dakwah dan Sosial Kemasyarakatan",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen dakwah dan sosial kemasyarakatan.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "anggota_dsk",
-      "label": "Data Anggota Departemen Dakwah dan Sosial Kemasyarakatan",
-      "helpText": "Masukkan data anggota departemen dakwah dan sosial kemasyarakatan dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "nama": "Drs. H. Muhsin"
-        },
-        {
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "type": "text",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "koordinator_ob",
-      "label": "Nama Koordinator Departemen Olahraga dan Budaya",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen olahraga dan budaya.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "anggota_ob",
-      "label": "Data Anggota Departemen Olahraga dan Budaya",
-      "helpText": "Masukkan data anggota departemen olahraga dan budaya dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "nama": "Drs. H. Muhsin"
-        },
-        {
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "type": "text",
-          "required": true
+          "name": "anggota",
+          "label": "Data Anggota Departemen",
+          "type": "array",
+          "required": true,
+          "fields": [
+            {
+              "name": "nama",
+              "label": "Nama Lengkap Anggota",
+              "type": "text",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -328,6 +218,7 @@
       "type": "array",
       "example": [
         {
+          "nama": "Lembaga Pendidikan dan Kaderisasi",
           "direktur": "Drs. H. Muhsin",
           "sekretaris": "H. Abdul Karim",
           "anggota": [
@@ -381,6 +272,60 @@
               "required": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "pelindung",
+      "label": "Data Pelindung",
+      "helpText": "Masukkan data pelindung dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "pembina",
+      "label": "Data Pembina",
+      "helpText": "Masukkan data pembina dalam susunan pengurus harian.",
+      "type": "array",
+      "example": [
+        {
+          "no": 1,
+          "nama": "Drs. H. Muhsin"
+        },
+        {
+          "no": 2,
+          "nama": "H. Abdul Karim"
+        }
+      ],
+      "required": true,
+      "fields": [
+        {
+          "name": "no",
+          "label": "No",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
         }
       ]
     }

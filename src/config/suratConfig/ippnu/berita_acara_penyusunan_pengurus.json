@@ -74,53 +74,43 @@
       "required": true
     },
     {
-      "name": "nama_ketua",
-      "label": "Nama Ketua IPPNU",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap ketua IPPNU wilayah terkait.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "nama_sekretaris",
-      "label": "Nama Sekretaris IPPNU",
-      "helpText": "Contoh: Lina Marlina, Nama lengkap sekretaris IPPNU wilayah terkait.",
-      "example": "Lina Marlina",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "wakil_ketua",
-      "label": "Data Wakil Ketua",
-      "helpText": "Masukkan data wakil ketua dalam susunan pengurus harian.",
+      "name": "pengurus_harian",
+      "label": "Data Pengurus Harian",
+      "helpText": "Masukkan data pengurus harian (Ketua, Sekretaris, Wakil Ketua, Wakil Sekretaris, Bendahara, Wakil Bendahara). Urutkan berdasarkan jabatan sesuai prioritas.",
       "type": "array",
       "example": [
         {
-          "title": "Wakil Ketua I",
-          "nama": "Siti Zahro",
+          "jabatan": "Ketua",
+          "nama": "Siti Fatimah",
           "ttd": "\\src\\templates\\ttd.png"
         },
         {
-          "title": "Wakil Ketua II",
+          "jabatan": "Sekretaris",
+          "nama": "Lina Marlina",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "jabatan": "Wakil Ketua I",
+          "nama": "Siti Aisyah",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "jabatan": "Wakil Sekretaris I",
+          "nama": "Dina Safitri",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "jabatan": "Bendahara",
           "nama": "Fadilatun Nafia",
           "ttd": "\\src\\templates\\ttd.png"
-        },
-        {
-          "title": "Wakil Ketua III",
-          "nama": "Rina Lestari",
-          "ttd": "\\src\\templates\\ttd.png"
-        },
-        {
-          "title": "Wakil Ketua IV",
-          "nama": "Dina Marlina",
-          "ttd": "\\src\\templates\\ttd.png"
         }
       ],
       "required": true,
       "fields": [
         {
-          "name": "title",
+          "name": "jabatan",
           "label": "Jabatan",
+          "helpText": "Contoh: Ketua, Sekretaris, Wakil Ketua I, Wakil Sekretaris I, Bendahara, dll.",
           "type": "text",
           "required": true
         },
@@ -132,61 +122,11 @@
         },
         {
           "name": "ttd",
-          "label": "Tanda Tangan Wakil Ketua",
+          "label": "Tanda Tangan",
           "type": "file",
-          "required": true
+          "required": false
         }
       ]
-    },
-    {
-      "name": "wakil_sekre",
-      "label": "Data Wakil Sekretaris",
-      "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "title": "Wakil Sekretaris I",
-          "nama": "Siti Zahro",
-          "ttd": "\\src\\templates\\ttd.png"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "title",
-          "label": "Jabatan",
-          "type": "text",
-          "required": true
-        },
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "type": "text",
-          "required": true
-        },
-        {
-          "name": "ttd",
-          "label": "Tanda Tangan Wakil Sekretaris",
-          "type": "file",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "nama_bendahara",
-      "label": "Nama Bendahara",
-      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara pengurus harian yang terpilih.",
-      "example": "Fadilatun Nafia",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "nama_wakil_bend",
-      "label": "Nama Wakil Bendahara",
-      "helpText": "Contoh: Rina Lestari, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
-      "example": "Rina Lestari",
-      "type": "text",
-      "required": true
     },
     {
       "name": "pelindung",
@@ -243,28 +183,36 @@
       ]
     },
     {
-      "name": "koordinator_po",
-      "label": "Nama Koordinator Departemen Pengembangan Organisasi",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen pengembangan organisasi.",
-      "example": "Siti Aminah",
+      "name": "nama_ketua",
+      "label": "Nama Ketua Terpilih",
+      "helpText": "Contoh: Siti Fatimah, Nama lengkap ketua terpilih pengurus harian.",
+      "example": "Siti Fatimah",
       "type": "text",
       "required": true
     },
     {
-      "name": "anggota_po",
-      "label": "Data Anggota Departemen Pengembangan Organisasi",
-      "helpText": "Masukkan data anggota departemen pengembangan organisasi dalam susunan pengurus harian.",
+      "name": "wakil_ketua",
+      "label": "Nama-nama Wakil Ketua Terpilih",
+      "helpText": "Masukkan data wakil ketua terpilih dalam susunan pengurus harian.",
       "type": "array",
       "example": [
         {
-          "nama": "Drs. H. Muhsin"
+          "title": "Wakil Ketua I",
+          "nama": "Dina Safitri"
         },
         {
-          "nama": "H. Abdul Karim"
+          "title": "Wakil Ketua II",
+          "nama": "Lina Marlina"
         }
       ],
       "required": true,
       "fields": [
+        {
+          "name": "title",
+          "label": "Jabatan",
+          "type": "text",
+          "required": true
+        },
         {
           "name": "nama",
           "label": "Nama Lengkap",
@@ -274,99 +222,129 @@
       ]
     },
     {
-      "name": "koordinator_ppps",
-      "label": "Nama Koordinator Departemen Pendidikan, Pengkaderan, dan Pengembangan SDM",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen pendidikan, pengkaderan, dan pengembangan SDM.",
-      "example": "Siti Aminah",
+      "name": "nama_sekretaris",
+      "label": "Nama Sekretaris Terpilih",
+      "helpText": "Contoh: Lina Marlina, Nama lengkap sekretaris pengurus harian yang terpilih.",
+      "example": "Lina Marlina",
       "type": "text",
       "required": true
     },
     {
-      "name": "anggota_ppps",
-      "label": "Data Anggota Departemen Pendidikan, Pengkaderan, dan Pengembangan SDM",
-      "helpText": "Masukkan data anggota departemen pendidikan, pengkaderan, dan pengembangan SDM dalam susunan pengurus harian.",
+      "name": "wakil_sekre",
+      "label": "Nama-nama Wakil Sekretaris Terpilih",
+      "helpText": "Masukkan data wakil sekretaris terpilih dalam susunan pengurus harian.",
       "type": "array",
       "example": [
         {
-          "nama": "Drs. H. Muhsin"
+          "title": "Wakil Sekretaris I",
+          "nama": "Dina Safitri"
         },
         {
-          "nama": "H. Abdul Karim"
+          "title": "Wakil Sekretaris II",
+          "nama": "Lina Marlina"
+        }
+      ],
+      "required": false,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Jabatan",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "nama",
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "nama_bendahara",
+      "label": "Nama Bendahara Terpilih",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara  pengurus harian yang terpilih.",
+      "example": "Fadilatun Nafia",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "nama_wakil_bend",
+      "label": "Nama Wakil Bendahara Terpilih",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
+      "example": "Fadilatun Nafia",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "departemen",
+      "label": "Data Departemen-Departemen",
+      "helpText": "Masukkan data departemen beserta koordinator dan anggotanya.",
+      "type": "array",
+      "example": [
+        {
+          "nama_departemen": "Pengembangan Organisasi",
+          "koordinator": "Siti Aminah",
+          "anggota": [
+            { "nama": "Drs. H. Muhsin" },
+            { "nama": "H. Abdul Karim" }
+          ]
+        },
+        {
+          "nama_departemen": "Pendidikan, Pengkaderan, dan Pengembangan SDM",
+          "koordinator": "Lina Marlina",
+          "anggota": [
+            { "nama": "Fadilatun Nafia" },
+            { "nama": "Siti Aisyah" }
+          ]
+        },
+        {
+          "nama_departemen": "Dakwah dan Sosial Kemasyarakatan",
+          "koordinator": "Dina Safitri",
+          "anggota": [
+            { "nama": "Rina Lestari" }
+          ]
+        },
+        {
+          "nama_departemen": "Olahraga dan Budaya",
+          "koordinator": "Fina Nuraini",
+          "anggota": [
+            { "nama": "Ahmad Sulaiman" }
+          ]
         }
       ],
       "required": true,
       "fields": [
         {
-          "name": "nama",
-          "label": "Nama Lengkap",
+          "name": "nama_departemen",
+          "label": "Nama Departemen",
+          "helpText": "Contoh: Pengembangan Organisasi, Pendidikan Pengkaderan dan Pengembangan SDM, dll.",
           "type": "text",
           "required": true
-        }
-      ]
-    },
-    {
-      "name": "koordinator_dsk",
-      "label": "Nama Koordinator Departemen Dakwah dan Sosial Kemasyarakatan",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen dakwah dan sosial kemasyarakatan.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "anggota_dsk",
-      "label": "Data Anggota Departemen Dakwah dan Sosial Kemasyarakatan",
-      "helpText": "Masukkan data anggota departemen dakwah dan sosial kemasyarakatan dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "nama": "Drs. H. Muhsin"
         },
         {
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
+          "name": "koordinator",
+          "label": "Nama Koordinator",
           "type": "text",
           "required": true
-        }
-      ]
-    },
-    {
-      "name": "koordinator_ob",
-      "label": "Nama Koordinator Departemen Olahraga dan Budaya",
-      "helpText": "Contoh: Siti Aminah, Nama lengkap koordinator departemen olahraga dan budaya.",
-      "example": "Siti Aminah",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "anggota_ob",
-      "label": "Data Anggota Departemen Olahraga dan Budaya",
-      "helpText": "Masukkan data anggota departemen olahraga dan budaya dalam susunan pengurus harian.",
-      "type": "array",
-      "example": [
-        {
-          "nama": "Drs. H. Muhsin"
         },
         {
-          "nama": "H. Abdul Karim"
-        }
-      ],
-      "required": true,
-      "fields": [
-        {
-          "name": "nama",
-          "label": "Nama Lengkap",
-          "type": "text",
-          "required": true
+          "name": "anggota",
+          "label": "Data Anggota Departemen",
+          "type": "array",
+          "required": true,
+          "fields": [
+            {
+              "name": "nama",
+              "label": "Nama Lengkap Anggota",
+              "type": "text",
+              "required": true
+            }
+          ]
         }
       ]
     },
-     {
+    {
       "name": "lembaga",
       "label": "Data Lembaga - Lembaga",
       "helpText": "Masukkan data lembaga dalam susunan pengurus harian.",
@@ -429,28 +407,6 @@
           ]
         }
       ]
-    }
-  ],
-  "ttd": [
-    {
-      "name": "ttd_ketua",
-      "label": "Tanda Tangan Ketua IPPNU",
-      "required": true
-    },
-    {
-      "name": "ttd_sekretaris",
-      "label": "Tanda Tangan Sekretaris IPPNU",
-      "required": true
-    },
-    {
-      "name": "ttd_bendahara",
-      "label": "Tanda Tangan Bendahara",
-      "required": true
-    },
-    {
-      "name": "ttd_wakil_bend",
-      "label": "Tanda Tangan Wakil Bendahara",
-      "required": true
     }
   ],
   "computedFields": [

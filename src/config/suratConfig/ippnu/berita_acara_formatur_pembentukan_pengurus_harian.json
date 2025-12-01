@@ -122,7 +122,7 @@
           "name": "ttd",
           "label": "Tanda Tangan Tim Formatur",
           "type": "file",
-          "required": true 
+          "required": true
         }
       ]
     },
@@ -181,26 +181,26 @@
       ]
     },
     {
-      "name": "nama_ketua_terpilih",
+      "name": "nama_ketua",
       "label": "Nama Ketua Terpilih",
-      "helpText": "Contoh: Siti Fatimah, Nama lengkap ketua pengurus harian yang terpilih.",
+      "helpText": "Contoh: Siti Fatimah, Nama lengkap ketua terpilih pengurus harian.",
       "example": "Siti Fatimah",
       "type": "text",
       "required": true
     },
     {
       "name": "wakil_ketua",
-      "label": "Data Wakil Ketua",
-      "helpText": "Masukkan data wakil ketua dalam susunan pengurus harian.",
+      "label": "Nama-nama Wakil Ketua Terpilih",
+      "helpText": "Masukkan data wakil ketua terpilih dalam susunan pengurus harian.",
       "type": "array",
       "example": [
         {
           "title": "Wakil Ketua I",
-          "nama_wakil_ketua": "Siti Aisyah"
+          "nama": "Dina Safitri"
         },
         {
           "title": "Wakil Ketua II",
-          "nama_wakil_ketua": "Fina Nuraini"
+          "nama": "Lina Marlina"
         }
       ],
       "required": true,
@@ -212,7 +212,7 @@
           "required": true
         },
         {
-          "name": "nama_wakil_ketua",
+          "name": "nama",
           "label": "Nama Lengkap",
           "type": "text",
           "required": true
@@ -229,50 +229,50 @@
     },
     {
       "name": "wakil_sekre",
-      "label": "Data Wakil Sekretaris",
-      "helpText": "Masukkan data wakil sekretaris dalam susunan pengurus harian.",
+      "label": "Nama-nama Wakil Sekretaris Terpilih",
+      "helpText": "Masukkan data wakil sekretaris terpilih dalam susunan pengurus harian.",
       "type": "array",
       "example": [
         {
           "title": "Wakil Sekretaris I",
-          "nama_wakil_sekre": "Dina Safitri"
+          "nama": "Dina Safitri"
         },
         {
           "title": "Wakil Sekretaris II",
-          "nama_wakil_sekre": "Rina Lestari"
+          "nama": "Lina Marlina"
         }
       ],
-      "required": true,
+      "required": false,
       "fields": [
         {
           "name": "title",
           "label": "Jabatan",
           "type": "text",
-          "required": true
+          "required": false
         },
         {
-          "name": "nama_wakil_sekre",
+          "name": "nama",
           "label": "Nama Lengkap",
           "type": "text",
-          "required": true
+          "required": false
         }
       ]
     },
     {
       "name": "nama_bendahara",
       "label": "Nama Bendahara Terpilih",
-      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara pengurus harian yang terpilih.",
+      "helpText": "Contoh: Fadilatun Nafia, Nama lengkap bendahara  pengurus harian yang terpilih.",
       "example": "Fadilatun Nafia",
       "type": "text",
       "required": true
     },
     {
       "name": "nama_wakil_bend",
-      "label": "Nama Wakil Bendahara",
+      "label": "Nama Wakil Bendahara Terpilih",
       "helpText": "Contoh: Fadilatun Nafia, Nama lengkap wakil bendahara pengurus harian yang terpilih.",
       "example": "Fadilatun Nafia",
       "type": "text",
-      "required": true
+      "required": false
     }
   ],
   "computedFields": [
@@ -300,6 +300,11 @@
       "name": "jenis_lembaga_sktn",
       "source": "jenis_lembaga",
       "transform": "abbreviate"
+    },
+    {
+      "name": "tingkat_lembaga_title",
+      "source": "tingkat_lembaga",
+      "transform": "titlecase"
     }
   ]
 }

@@ -74,149 +74,68 @@
       "required": true
     },
     {
-      "name": "ttd_ketua_terpilih",
-      "label": "Tanda Tangan Ketua Terpilih",
-      "helpText": "Unggah gambar tanda tangan ketua terpilih dalam format .jpg atau .png.",
-      "type": "file",
+      "name": "tim_formatur",
+      "label": "Tim Formatur",
+      "helpText": "Masukkan data tim formatur yang menyusun berita acara rapat formatur.",
+      "type": "array",
+      "fields": [
+        {
+          "name": "nama",
+          "label": "Nama Tim Formatur",
+          "helpText": "Contoh: Ahmad Sulaiman, Nama lengkap anggota tim formatur.",
+          "example": "Ahmad Sulaiman",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "jabatan",
+          "label": "Jabatan Tim Formatur",
+          "helpText": "Contoh: Ketua, Jabatan anggota tim formatur.",
+          "example": "Ketua terpilih",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "ttd",
+          "label": "Tanda Tangan Tim Formatur",
+          "helpText": "Unggah gambar tanda tangan anggota tim formatur dalam format .jpg atau .png.",
+          "type": "file",
+          "required": true
+        }
+      ],
+      "example": [
+        {
+          "nama": "Ahmad Sulaiman",
+          "jabatan": "Ketua Terpilih",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "nama": "Siti Aminah",
+          "jabatan": "Ketua Demisioner",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "nama": "Fadilatun Nafia",
+          "jabatan": "Anggota Formatur",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "nama": "Dina Marlina",
+          "jabatan": "Anggota Formatur",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "nama": "Sulaiman Harun",
+          "jabatan": "Anggota Formatur",
+          "ttd": "\\src\\templates\\ttd.png"
+        },
+        {
+          "nama": "Rina Lestari",
+          "jabatan": "Anggota Formatur",
+          "ttd": "\\src\\templates\\ttd.png"
+        }
+      ],
       "required": true
-    },
-    {
-      "name": "nama_ketua_terpilih",
-      "label": "Nama Ketua Terpilih",
-      "helpText": "Contoh: Ahmad Sulaiman, Nama ketua terpilih hasil RAPTA.",
-      "example": "Ahmad Sulaiman",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "ttd_ketua_demisioner",
-      "label": "Tanda Tangan Ketua Demisioner",
-      "helpText": "Unggah gambar tanda tangan ketua demisioner dalam format .jpg atau .png.",
-      "type": "file",
-      "required": true
-    },
-    {
-      "name": "nama_ketua_demisioner",
-      "label": "Nama Ketua Demisioner",
-      "helpText": "Contoh: Budi Santoso, Nama ketua demisioner sebelum RAPTA.",
-      "example": "Budi Santoso",
-      "type": "text",
-      "required": true
-    },
-    {
-      "name": "hasAnggota1",
-      "label": "Anggota Formatur 1",
-      "type": "boolean",
-      "required": true,
-      "helpText": "Apakah ada anggota formatur tambahan pertama?",
-      "example": true
-    },
-    {
-      "name": "ttd_anggota1",
-      "label": "Tanda Tangan Anggota Formatur 1",
-      "helpText": "Unggah gambar tanda tangan anggota formatur pertama dalam format .jpg atau .png.",
-      "type": "file",
-      "required": false
-    },
-    {
-      "name": "nama_anggota1",
-      "label": "Nama Anggota Formatur 1",
-      "helpText": "Contoh: Faqih Almuqoddam, Nama anggota formatur pertama.",
-      "example": "Faqih Almuqoddam",
-      "type": "text",
-      "required": false
-    },
-    {
-      "name": "hasAnggota2",
-      "label": "Anggota Formatur 2",
-      "type": "boolean",
-      "required": true,
-      "helpText": "Apakah ada anggota formatur tambahan kedua?",
-      "example": true
-    },
-    {
-      "name": "ttd_anggota2",
-      "label": "Tanda Tangan Anggota Formatur 2",
-      "helpText": "Unggah gambar tanda tangan anggota formatur kedua dalam format .jpg atau .png.",
-      "type": "file",
-      "required": false
-    },
-    {
-      "name": "nama_anggota2",
-      "label": "Nama Anggota Formatur 2",
-      "helpText": "Contoh: Ahmad Kadafi, Nama anggota formatur kedua.",
-      "example": "Ahmad Kadafi",
-      "type": "text",
-      "required": false
-    },
-    {
-      "name": "hasAnggota3",
-      "label": "Anggota Formatur 3",
-      "type": "boolean",
-      "required": true,
-      "helpText": "Apakah ada anggota formatur tambahan ketiga?",
-      "example": true
-    },
-    {
-      "name": "ttd_anggota3",
-      "label": "Tanda Tangan Anggota Formatur 3",
-      "helpText": "Unggah gambar tanda tangan anggota formatur ketiga dalam format .jpg atau .png.",
-      "type": "file",
-      "required": false
-    },
-    {
-      "name": "nama_anggota3",
-      "label": "Nama Anggota Formatur 3",
-      "helpText": "Contoh: Rina Lestari, Nama anggota formatur ketiga.",
-      "example": "Rina Lestari",
-      "type": "text",
-      "required": false
-    },
-    {
-      "name": "hasAnggota4",
-      "label": "Anggota Formatur 4",
-      "type": "boolean",
-      "required": true,
-      "helpText": "Apakah ada anggota formatur tambahan keempat?",
-      "example": true
-    },
-    {
-      "name": "ttd_anggota4",
-      "label": "Tanda Tangan Anggota Formatur 4",
-      "helpText": "Unggah gambar tanda tangan anggota formatur keempat dalam format .jpg atau .png.",
-      "type": "file",
-      "required": false
-    },
-    {
-      "name": "nama_anggota4",
-      "label": "Nama Anggota Formatur 4",
-      "helpText": "Contoh: Dina Marlina, Nama anggota formatur keempat.",
-      "example": "Dina Marlina",
-      "type": "text",
-      "required": false
-    },
-    {
-      "name": "hasAnggota5",
-      "label": "Anggota Formatur 5",
-      "type": "boolean",
-      "required": true,
-      "helpText": "Apakah ada anggota formatur tambahan kelima?",
-      "example": true
-    },
-    {
-      "name": "ttd_anggota5",
-      "label": "Tanda Tangan Anggota Formatur 5",
-      "helpText": "Unggah gambar tanda tangan anggota formatur kelima dalam format .jpg atau .png.",
-      "type": "file",
-      "required": false
-    },
-    {
-      "name": "nama_anggota5",
-      "label": "Nama Anggota Formatur 5",
-      "helpText": "Contoh: Sulaiman Harun, Nama anggota formatur kelima.",
-      "example": "Sulaiman Harun",
-      "type": "text",
-      "required": false
     }
   ],
   "computedFields": [
