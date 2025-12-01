@@ -362,19 +362,19 @@
           "name": "anggota",
           "label": "Data Anggota Lembaga",
           "type": "array",
-          "required": true,
+          "required": false,
           "fields": [
             {
               "name": "nama",
               "label": "Nama Anggota",
               "type": "text",
-              "required": true
+              "required": false
             },
             {
               "name": "alamat",
               "label": "Alamat Anggota",
               "type": "text",
-              "required": true
+              "required": false
             }
           ]
         }
