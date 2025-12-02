@@ -47,6 +47,8 @@ const formatImg = (typeSurat) => {
       return [347, 208];
     case "sertifikat_kaderisasi":
       return [602, 425];
+    case "curriculum_vitae":
+      return [106, 151];
     default:
       return [120, 70];
   }

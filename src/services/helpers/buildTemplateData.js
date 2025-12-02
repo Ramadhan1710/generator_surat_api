@@ -3,7 +3,6 @@ import path from "path";
 import os from "os";
 import { format } from "../../utils/format.js";
 
-
 function buildTemplateData(config, data, files) {
   const result = {};
 
@@ -23,7 +22,7 @@ function buildTemplateData(config, data, files) {
       }
     }
 
-    if (field.type === "boolean"){
+    if (field.type === "boolean") {
       value = JSON.parse(value);
     }
 
@@ -37,10 +36,23 @@ function buildTemplateData(config, data, files) {
     }
 
     // Nested fields (array)
-    if (field.fields && Array.isArray(value)) {
-      const baseArray = value.map((item) =>
+    if (field.fields && field.type === "array") {
+      const arrayValue = Array.isArray(value) ? value : [];
+
+      const baseArray = arrayValue.map((item) =>
         buildTemplateData({ fields: field.fields }, item, files)
       );
+
+      const orgFields = {
+        organisasi_ketua: "no_organisasi_ketua",
+        organisasi_sekretaris: "no_organisasi_sekretaris",
+        organisasi_bendahara: "no_organisasi_bendahara",
+      };
+
+      if (orgFields[field.name]) {
+        result[field.name] = baseArray;
+        result[orgFields[field.name]] = baseArray.length === 0;
+      }
 
       if (field.name === "pembina") {
         result[field.name] = baseArray.map((item, index) => {
@@ -257,7 +269,6 @@ function buildTemplateData(config, data, files) {
     }
   }
 
-
   // Deteksi apakah ada wakil sekretaris
   if (result.wakil_sekre && Array.isArray(result.wakil_sekre)) {
     result.wakil_sekre.forEach((ws, index) => {
@@ -274,21 +285,6 @@ function buildTemplateData(config, data, files) {
   }
 
   return result;
-}
-
-function buildStringMember(count) {
-  switch (count) {
-    case 2:
-      return "isTwoMember";
-    case 3:
-      return "isThreeMember";
-    case 4:
-      return "isFourMember";
-    case 5:
-      return "isFiveMember";
-    default:
-      return null;
-  }
 }
 
 export { buildTemplateData };

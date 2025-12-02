@@ -81,14 +81,7 @@
       "type": "text",
       "required": true
     },
-    {
-      "name": "no_organization_ketua",
-      "label": "Pengalaman Organisasi Ketua?",
-      "helpText": "Apakah ketua memiliki pengalaman organisasi sebelumnya?",
-      "example": "Ya",
-      "type": "text",
-      "required": true
-    },
+   
     {
       "name": "organisasi_ketua",
       "label": "Pengalaman Organisasi Ketua",
@@ -102,13 +95,13 @@
           "nama": "Anggota PMR SMA Negeri 1 Mojosari"
         }
       ],
-      "required": true,
+      "required": false,
       "fields": [
         {
           "name": "nama",
           "label": "Nama Organisasi",
           "type": "text",
-          "required": true
+          "required": false
         }
       ]
     },
@@ -133,12 +126,12 @@
       ],
       "example": [
         {
-          "tingkat_lembaga": "SMA",
-          "nama_lembaga": "SMA Negeri 1 Mojosari"
+          "tingkat_pendidikan": "SMA",
+          "nama_pendidikan": "SMA Negeri 1 Mojosari"
         },
         {
-          "tingkat_lembaga": "S1",
-          "nama_lembaga": "Universitas Negeri Malang"
+          "tingkat_pendidikan": "S1",
+          "nama_pendidikan": "Universitas Negeri Malang"
         }
       ]
     },
@@ -205,27 +198,20 @@
       "type": "text",
       "required": true
     },
-    {
-      "name": "no_organization_sekretaris",
-      "label": "Pengalaman Organisasi Sekretaris?",
-      "helpText": "Apakah sekretaris memiliki pengalaman organisasi sebelumnya?",
-      "example": "Ya",
-      "type": "text",
-      "required": true
-    },
+
     {
       "name": "organisasi_sekretaris",
       "label": "Pengalaman Organisasi Sekretaris",
       "helpText": "Sebutkan pengalaman organisasi yang pernah diikuti sekretaris.",
       "type": "array",
       "example": [{ "nama": "Sekretaris OSIS SMA Negeri 2 Mojokerto" }],
-      "required": true,
+      "required": false,
       "fields": [
         {
           "name": "nama",
           "label": "Nama Organisasi",
           "type": "text",
-          "required": true
+          "required": false
         }
       ]
     },
@@ -318,27 +304,20 @@
       "type": "text",
       "required": true
     },
-    {
-      "name": "no_organization_bendahara",
-      "label": "Pengalaman Organisasi Bendahara?",
-      "helpText": "Apakah bendahara memiliki pengalaman organisasi sebelumnya?",
-      "example": "Ya",
-      "type": "text",
-      "required": true
-    },
+
     {
       "name": "organisasi_bendahara",
       "label": "Pengalaman Organisasi Bendahara",
       "helpText": "Sebutkan pengalaman organisasi yang pernah diikuti bendahara.",
       "type": "array",
       "example": [{ "nama": "Bendahara Karang Taruna Desa" }],
-      "required": true,
+      "required": false,
       "fields": [
         {
           "name": "nama",
           "label": "Nama Organisasi",
           "type": "text",
-          "required": true
+          "required": false
         }
       ]
     },

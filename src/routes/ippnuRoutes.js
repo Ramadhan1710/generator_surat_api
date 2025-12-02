@@ -15,7 +15,7 @@ const suratTypes = [
     "susunan-pengurus",
     "kartu-identitas",
     "sertifikat-kaderisasi",
-    "curiculum-vitae"
+    "curriculum-vitae"
 ];
 
 suratTypes.forEach((type) => {
