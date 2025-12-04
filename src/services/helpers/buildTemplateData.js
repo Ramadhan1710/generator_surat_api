@@ -3,7 +3,7 @@ import path from "path";
 import os from "os";
 import { format } from "../../utils/format.js";
 
-function buildTemplateData(config, data, files) {
+function buildTemplateData(config, data, files, parentPath = "") {
   const result = {};
 
   const fields = config.fields || [];
@@ -39,9 +39,11 @@ function buildTemplateData(config, data, files) {
     if (field.fields && field.type === "array") {
       const arrayValue = Array.isArray(value) ? value : [];
 
-      const baseArray = arrayValue.map((item) =>
-        buildTemplateData({ fields: field.fields }, item, files)
-      );
+      const baseArray = arrayValue.map((item, index) => {
+        // Format untuk Flutter: field_name[index] (tanpa parent path untuk array level 1)
+        const itemPath = `${field.name}[${index}]`;
+        return buildTemplateData({ fields: field.fields }, item, files, itemPath);
+      });
 
       const orgFields = {
         organisasi_ketua: "no_organisasi_ketua",
@@ -185,17 +187,29 @@ function buildTemplateData(config, data, files) {
 
     // Nested object
     if (field.fields && typeof value === "object" && value !== null) {
+      // Untuk nested object, gunakan dot notation
+      const objectPath = parentPath ? `${parentPath}[${field.name}]` : field.name;
       result[field.name] = buildTemplateData(
         { fields: field.fields },
         value,
-        files
+        files,
+        objectPath
       );
       continue;
     }
 
     // File handling
     if (field.type === "file") {
-      const file = files.find((f) => f.fieldname === field.name);
+      // Cek apakah ini nested field (ada parentPath)
+      // Format dari Flutter: field_name[index][subfield] atau field_name untuk root level
+      const fullFieldName = parentPath ? `${parentPath}[${field.name}]` : field.name;
+      
+      const file = files.find((f) => f.fieldname === fullFieldName || f.fieldname === field.name);
+
+      // Debug logging untuk file di dalam array
+      if (parentPath) {
+        console.log(`Looking for file: ${fullFieldName}, Found:`, file ? file.fieldname : 'NOT FOUND');
+      }
 
       if (file) {
         if (file.path && fs.existsSync(file.path)) {
