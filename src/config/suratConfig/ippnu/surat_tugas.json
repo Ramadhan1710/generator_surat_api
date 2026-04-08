@@ -1,0 +1,94 @@
+{
+  "template": "surat_tugas",
+  "title": "Surat Tugas",
+  "fields": [
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "type": "text",
+      "required": true,
+      "example": "01/A/PAC/ST/VIII/7354/IX/2024",
+      "helpText": "Contoh: 01/A/PAC/ST/VIII/7354/IX/2024, Nomor surat tugas yang unik dan sesuai dengan format yang berlaku."
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Pembuatan Surat (Hijriah)",
+      "type": "text",
+      "required": true,
+      "example": "1 Safar 1445",
+      "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah."
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Pembuatan Surat (Masehi)",
+      "type": "text",
+      "required": true,
+      "example": "10 September 2024",
+      "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi."
+    },
+    {
+      "name": "keterangan_tugas",
+      "label": "Keterangan Tugas",
+      "type": "text",
+      "required": true,
+      "example": "KONFERCAB PC IPNU IPPNU Kab. Nganjuk ",
+      "helpText": "Contoh: KONFERCAB PC IPNU IPPNU Kab. Nganjuk, Keterangan tugas yang diberikan kepada penerima surat."
+    },
+    {
+      "name": "hari_tugas",
+      "label": "Hari Tugas",
+      "type": "text",
+      "required": true,
+      "example": "Sabtu - Minggu",
+      "helpText": "Contoh: Sabtu - Minggu, Hari pelaksanaan tugas yang diberikan."
+    },
+    {
+      "name": "tanggal_tugas",
+      "label": "Tanggal Tugas",
+      "type": "text",
+      "required": true,
+      "example": "18 – 19 Januari 2025",
+      "helpText": "Contoh: 18 – 19 Januari 2025, Tanggal pelaksanaan tugas yang diberikan."
+    },
+    {
+      "name": "tempat_tugas",
+      "label": "Tempat Tugas",
+      "type": "text",
+      "required": true,
+      "example": "Yayasan Baiturrohman Desa Karangtengah Kecamatan Bagor Kabupaten Nganjuk.",
+      "helpText": "Contoh: Yayasan Baiturrohman Desa Karangtengah Kecamatan Bagor Kabupaten Nganjuk., Tempat pelaksanaan tugas yang diberikan."
+    },
+    {
+      "name": "nama",
+      "label": "Nama Penerima Tugas",
+      "type": "text",
+      "required": true,
+      "example": "Abdul Azis, Nama lengkap penerima tugas yang diberikan.",
+      "helpText": "Contoh: Nama Penerima Tugas, Nama lengkap penerima tugas yang diberikan."
+    },
+    {
+      "name": "tempat_tanggal_lahir",
+      "label": "Tempat, Tanggal Lahir Penerima Tugas",
+      "type": "text",
+      "required": true,
+      "example": "Nganjuk, 1 Januari 2000, Tempat dan tanggal lahir penerima tugas yang diberikan.",
+      "helpText": "Contoh: Nganjuk, 1 Januari 2000, Tempat dan tanggal lahir penerima tugas yang diberikan."
+    },
+    {
+      "name": "jabatan",
+      "label": "Jabatan Penerima Tugas",
+      "type": "text",
+      "required": true,
+      "example": "Ketua PAC IPPNU Kec. Loceret, Jabatan penerima tugas yang diberikan.",
+      "helpText": "Contoh: Ketua PAC IPPNU Kec. Loceret, Jabatan penerima tugas yang diberikan."
+    },
+    {
+      "name": "alamat",
+      "label": "Alamat Penerima Tugas",
+      "type": "text",
+      "required": true,
+      "example": "Jl. Raya Loceret No. 123, Alamat lengkap penerima tugas yang diberikan.",
+      "helpText": "Contoh: Jl. Raya Loceret No. 123, Alamat lengkap penerima tugas yang diberikan."
+    }
+  ]
+}

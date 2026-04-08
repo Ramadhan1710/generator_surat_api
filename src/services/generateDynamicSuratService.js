@@ -4,13 +4,13 @@ import { fillDocxTemplate } from "./docxService.js";
 import { buildTemplateData } from "./helpers/buildTemplateData.js";
 
 export const generateDynamicSuratService = async (suratEntity) => {
-  const { type_surat, data, files, lembaga_name } = suratEntity;
+  const { type_surat, data, files, jenis_surat } = suratEntity;
 
-  console.log("Generating surat for:", type_surat, "of", lembaga_name);
+  console.log("Generating surat for:", type_surat, "of", jenis_surat);
 
   const configPath = path.join(
     "src/config/suratConfig",
-    lembaga_name,
+    jenis_surat,
     `${type_surat}.json`
   );
   console.log("Config Path:", configPath);
@@ -21,9 +21,11 @@ export const generateDynamicSuratService = async (suratEntity) => {
 
   const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
 
+  console.log("Config Loaded:", config);
+
   const templatePath = path.join(
     "src/templates",
-    lembaga_name,
+    jenis_surat,
     config.template
   );
 

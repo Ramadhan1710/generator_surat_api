@@ -1,0 +1,70 @@
+{
+  "template": "surat_keterangan",
+  "title": "Surat Keterangan",
+  "fields": [
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "type": "text",
+      "required": true,
+      "example": "01/A/PAC/S.Ket/VIII/7355/IX/2024",
+      "helpText": "Contoh: 01/A/PAC/S.Ket/VIII/7355/IX/2024, Nomor surat keterangan yang unik dan sesuai dengan format yang berlaku."
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Pembuatan Surat (Hijriah)",
+      "type": "text",
+      "required": true,
+      "example": "1 Safar 1445",
+      "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah."
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Pembuatan Surat (Masehi)",
+      "type": "text",
+      "required": true,
+      "example": "10 September 2024",
+      "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi."
+    },
+    {
+      "name": "keterangan",
+      "label": "Keterangan",
+      "type": "text",
+      "required": true,
+      "example": "Adalah Anggota Aktif PAC IPNU Kecamatan Loceret periode 2024-2026.",
+      "helpText": "Contoh: Adalah Anggota Aktif PAC IPNU Kecamatan Loceret periode 2024-2026. Keterangan  yang diberikan kepada penerima surat."
+    },
+    {
+      "name": "nama",
+      "label": "Nama Penerima Keterangan",
+      "type": "text",
+      "required": true,
+      "example": "Abdul Azis, Nama lengkap penerima keterangan yang diberikan.",
+      "helpText": "Contoh: Nama Penerima Keterangan, Nama lengkap penerima keterangan yang diberikan."
+    },
+    {
+      "name": "tempat_tanggal_lahir",
+      "label": "Tempat, Tanggal Lahir Penerima Keterangan",
+      "type": "text",
+      "required": true,
+      "example": "Nganjuk, 1 Januari 2000, Tempat dan tanggal lahir penerima keterangan yang diberikan.",
+      "helpText": "Contoh: Nganjuk, 1 Januari 2000, Tempat dan tanggal lahir penerima keterangan yang diberikan."
+    },
+    {
+      "name": "jabatan",
+      "label": "Jabatan Penerima Keterangan",
+      "type": "text",
+      "required": true,
+      "example": "Ketua PAC IPPNU Kec. Loceret, Jabatan penerima keterangan yang diberikan.",
+      "helpText": "Contoh: Ketua PAC IPPNU Kec. Loceret, Jabatan penerima keterangan yang diberikan."
+    },
+    {
+      "name": "alamat",
+      "label": "Alamat Penerima Keterangan",
+      "type": "text",
+      "required": true,
+      "example": "Jl. Raya Loceret No. 123, Alamat lengkap penerima keterangan yang diberikan.",
+      "helpText": "Contoh: Jl. Raya Loceret No. 123, Alamat lengkap penerima keterangan yang diberikan."
+    }
+  ]
+}

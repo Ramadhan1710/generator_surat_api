@@ -1,0 +1,94 @@
+{
+    "template": "surat_permohonan_pemateri.docx",
+    "title": "Surat Permohonan Pemateri",
+    "fields": [
+        {
+            "name": "nomor_surat",
+            "label": "Nomor Surat",
+            "type": "text",
+            "required": true,
+            "example": "01/PAC/B/VIII/7354.7355/IX/2024",
+            "helpText": "Contoh: 01/PAC/B/VIII/7354.7355/IX/2024, Nomor surat permohonan peminjaman alat yang unik dan sesuai dengan format yang berlaku."
+        },
+        {
+            "name": "lampiran",
+            "label": "Lampiran",
+            "type": "text",
+            "required": true,
+            "example": "1 (satu) berkas",
+            "helpText": "Contoh: 1 (satu) berkas, Jumlah lampiran yang disertakan dalam surat permohonan peminjaman alat."
+        },
+        {
+            "name": "tujuan_surat",
+            "label": "Tujuan Surat",
+            "type": "text",
+            "required": true,
+            "example": "MWC NU Kec. Loceret",
+            "helpText": "Contoh: MWC NU Kec. Loceret, Tujuan surat permohonan peminjaman alat yang ditujukan kepada pihak yang berwenang."
+        },
+        {
+            "name": "nama_kegiatan",
+            "label": "Nama Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "Pelatihan Jurnalistik & Konten Dakwah Digital",
+            "helpText": "Nama kegiatan yang diikuti oleh peserta."
+        },
+        {
+            "name": "hari_tanggal",
+            "label": "Hari, Tanggal Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "Sabtu, 20 Januari 2025",
+            "helpText": "Hari dan tanggal pelaksanaan kegiatan."
+        },
+        {
+            "name": "waktu",
+            "label": "Waktu Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "07.30 WIB s.d. selesai",
+            "helpText": "Jam pelaksanaan kegiatan dimulai hingga selesai."
+        },
+        {
+            "name": "tempat",
+            "label": "Tempat Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "Aula Kementerian Agama Kabupaten Nganjuk",
+            "helpText": "Lokasi atau tempat kegiatan dilaksanakan."
+        },
+        {
+            "name": "pemateri",
+            "label": "Nama Pemateri",
+            "type": "text",
+            "required": true,
+            "example": "Bapak Dr. H. Ahmad Fauzi, M.Ag.",
+            "helpText": "Contoh: Bapak Dr. H. Ahmad Fauzi, M.Ag., Nama lengkap pemateri yang diundang untuk memberikan materi dalam kegiatan."
+        },
+        {
+            "name": "materi",
+            "label": "Materi yang Disampaikan",
+            "type": "text",
+            "required": true,
+            "example": "Teknologi Informasi dalam Dakwah",
+            "helpText": "Contoh: Teknologi Informasi dalam Dakwah, Topik atau materi yang akan disampaikan oleh pemateri dalam kegiatan."
+        },
+        {
+            "name": "tanggal_hijriah",
+            "label": "Tanggal Pembuatan Surat (Hijriah)",
+            "type": "text",
+            "required": true,
+            "example": "1 Safar 1445",
+            "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah."
+        },
+        {
+            "name": "tanggal_masehi",
+            "label": "Tanggal Pembuatan Surat (Masehi)",
+            "type": "text",
+            "required": true,
+            "example": "10 September 2024",
+            "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi."
+        }
+    ]
+}

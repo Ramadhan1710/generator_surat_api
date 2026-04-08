@@ -6,193 +6,196 @@ import path from "path";
 const suratBasePath = "src/config/suratConfig";
 const pathsObj = {};
 
-function flattenArrayFields(field, maxItems = 10) {
-  const result = {};
+// =======================
+// HELPER FUNCTIONS
+// =======================
 
-  for (let i = 0; i < maxItems; i++) {
-    for (const sub of field.fields) {
-      const key = `${field.name}[${i}][${sub.name}]`;
-      result[key] = buildSwaggerProperty(sub);
-    }
+// 🔹 Parse JSON aman
+function safeParseJSON(filePath) {
+  const raw = fs.readFileSync(filePath, "utf-8");
+  if (!raw.trim()) return null;
+
+  try {
+    return JSON.parse(raw);
+  } catch (err) {
+    console.warn(`⚠️ Gagal parse JSON di ${filePath}: ${err.message}`);
+    return null;
   }
-
-  return result;
 }
 
+// 🔹 Format route & title
+const formatRouteType = (typeName) => typeName.replace(/_/g, "-");
+const formatTitle = (typeName) =>
+  typeName.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toLowerCase());
+
+// 🔹 Build property Swagger
 function buildSwaggerProperty(field) {
   const base = {
     description: field.label || field.name,
     example: field.example || field.helpText || "",
   };
 
-  // Kalau ada subfields
+  // Nested fields (object / array)
   if (field.fields && Array.isArray(field.fields)) {
-    // Jika type array/table → array of object
     if (["table", "array"].includes(field.type)) {
       return {
-        description: field.label || field.name,
+        ...base,
         type: "array",
         items: {
           type: "object",
           properties: Object.fromEntries(
-            field.fields.map((sub) => [sub.name, buildSwaggerProperty(sub)])
+            field.fields.map((sub) => [sub.name, buildSwaggerProperty(sub)]),
           ),
         },
         example: field.example,
       };
     }
 
-    // Kalau type object
     return {
       ...base,
       type: "object",
       properties: Object.fromEntries(
-        field.fields.map((sub) => [sub.name, buildSwaggerProperty(sub)])
+        field.fields.map((sub) => [sub.name, buildSwaggerProperty(sub)]),
       ),
     };
   }
 
-  // Field file upload
+  // File upload
   if (field.format === "binary" || field.type === "file") {
     return { ...base, type: "string", format: "binary" };
   }
 
-  // Pastikan type valid
-  const validTypes = [
-    "string",
-    "number",
-    "integer",
-    "boolean",
-    "array",
-    "object",
-  ];
-  const fieldType = validTypes.includes(field.type) ? field.type : "string";
-
+  // Validasi type
+  const validTypes = ["string", "number", "integer", "boolean"];
   return {
     ...base,
-    type: fieldType,
+    type: validTypes.includes(field.type) ? field.type : "string",
   };
 }
 
-for (const lembaga of fs.readdirSync(suratBasePath)) {
-  const lembagaDir = path.join(suratBasePath, lembaga);
-  if (!fs.lstatSync(lembagaDir).isDirectory()) continue;
+// 🔹 Gabungkan semua field
+function buildAllFields(jenisSurat, typeName, config) {
+  return [
+    {
+      name: "jenis_surat",
+      type: "string",
+      required: true,
+      example: jenisSurat,
+      label: "Jenis Surat (IPNU, IPPNU, Bersama)",
+    },
+    {
+      name: "type_surat",
+      type: "string",
+      required: true,
+      example: typeName,
+      label: "Jenis template surat",
+    },
+    ...(config.fields || []),
+    ...(config.ttd || []).map((t) => ({
+      ...t,
+      type: "string",
+      format: "binary",
+    })),
+  ];
+}
 
-  const files = fs.readdirSync(lembagaDir);
+// 🔹 Ambil required fields
+const getRequiredFields = (fields) =>
+  fields.filter((f) => f.required).map((f) => f.name);
 
-  for (const file of files) {
-    if (!file.endsWith(".json")) continue;
-
-    const configPath = path.join(lembagaDir, file);
-    const raw = fs.readFileSync(configPath, "utf-8");
-    if (!raw.trim()) continue; // skip JSON kosong
-
-    let config;
-    try {
-      config = JSON.parse(raw);
-    } catch (err) {
-      console.warn(`⚠️  Gagal parse JSON di ${configPath}:`, err.message);
-      continue;
-    }
-
-    const typeName = path.basename(file, ".json");
-
-    const routeType = typeName.replace(/_/g, "-");
-    const title = typeName
-      .replace(/_/g, " ")
-      .replace(/\b\w/g, (c) => c.toLowerCase());
-    const routePath = `/api/surat/${lembaga}/${routeType}`;
-
-    // 🔹 gabungkan lembaga, typeSurat, fields dan ttd jadi satu schema
-    const allFields = [
-      {
-        name: "lembaga_name",
-        type: "string",
-        required: true,
-        example: lembaga,
-        label: "Lembaga (misal: IPNU, IPPNU, dll)",
-      },
-      {
-        name: "type_surat",
-        type: "string",
-        required: true,
-        example: typeName,
-        label: "Jenis surat (misal: surat_permohonan_pengesahan)",
-      },
-      ...(config.fields || []),
-      ...(config.ttd || []).map((t) => ({
-        ...t,
-        type: "string",
-        format: "binary", // penting biar swagger tahu ini file upload
-      })),
-    ];
-
-    // 🔹 kumpulkan required fields
-    const requiredFields = allFields
-      .filter((f) => f.required)
-      .map((f) => f.name);
-
-    // 🔹 bikin properties untuk swagger
-    // const properties = Object.fromEntries(
-    //   allFields.map((f) => [
-    //     f.name,
-    //     {
-    //       type: f.type || "string",
-    //       format: f.format,
-    //       description: f.label || f.name,
-    //       example: f.example || f.helpText || "",
-    //     },
-    //   ])
-    // );
-
-    const properties = Object.fromEntries(
-      allFields.map((f) => [f.name, buildSwaggerProperty(f)])
-    );
-
-    pathsObj[routePath] = {
-      post: {
-        summary: `Generate Surat: ${title} (${lembaga})`,
-        tags: [`Surat - ${lembaga}`],
-        requestBody: {
-          required: true,
-          content: {
-            "multipart/form-data": {
-              schema: {
-                type: "object",
-                required: requiredFields,
-                properties,
-              },
+// 🔹 Build response sukses
+function buildSuccessResponse() {
+  return {
+    description: "Surat berhasil dibuat",
+    content: {
+      "application/json": {
+        schema: {
+          type: "object",
+          properties: {
+            message: {
+              type: "string",
+              example: "Surat berhasil dibuat",
+            },
+            fileUrl: {
+              type: "string",
+              example: "/uploads/surat.docx",
             },
           },
         },
-        responses: {
-          200: {
-            description: "Surat berhasil dibuat",
+      },
+    },
+  };
+}
+
+// =======================
+// MAIN GENERATOR
+// =======================
+
+function generateSwaggerPaths() {
+  const paths = {};
+
+  const jenisSuratList = fs.readdirSync(suratBasePath);
+  console.log("Jenis Surat Ditemukan:", jenisSuratList);
+
+  for (const jenisSurat of jenisSuratList) {
+    const jenisSuratDir = path.join(suratBasePath, jenisSurat);
+
+    if (!fs.lstatSync(jenisSuratDir).isDirectory()) continue;
+
+    const files = fs.readdirSync(jenisSuratDir);
+
+    for (const file of files) {
+      if (!file.endsWith(".json")) continue;
+
+      const configPath = path.join(jenisSuratDir, file);
+      const config = safeParseJSON(configPath);
+      if (!config) continue;
+
+      const typeName = path.basename(file, ".json");
+
+      const routeType = formatRouteType(typeName);
+      const title = formatTitle(typeName);
+      const routePath = `/api/surat/${jenisSurat}/${routeType}`;
+
+      const allFields = buildAllFields(jenisSurat, typeName, config);
+      const requiredFields = getRequiredFields(allFields);
+
+      const properties = Object.fromEntries(
+        allFields.map((f) => [f.name, buildSwaggerProperty(f)]),
+      );
+
+      paths[routePath] = {
+        post: {
+          summary: `Generate Surat: ${title} (${jenisSurat})`,
+          tags: [`Surat - ${jenisSurat}`],
+          requestBody: {
+            required: true,
             content: {
-              "application/json": {
+              "multipart/form-data": {
                 schema: {
                   type: "object",
-                  properties: {
-                    message: {
-                      type: "string",
-                      example: "Surat berhasil dibuat",
-                    },
-                    fileUrl: {
-                      type: "string",
-                      example: "/uploads/surat_permohonan_pengesahan.docx",
-                    },
-                  },
+                  required: requiredFields,
+                  properties,
                 },
               },
             },
           },
-          400: { description: "Data tidak valid" },
-          500: { description: "Gagal membuat surat" },
+          responses: {
+            200: buildSuccessResponse(),
+            400: { description: "Data tidak valid" },
+            500: { description: "Gagal membuat surat" },
+          },
         },
-      },
-    };
+      };
+    }
   }
+
+  return paths;
 }
+
+// =======================
+// SWAGGER SETUP
+// =======================
 
 const options = {
   definition: {
@@ -205,19 +208,15 @@ const options = {
     },
     servers: [
       {
-        url: "https://generator-surat-api.onrender.com",
-        description: "Production server",
-      },
-      {
         url: "https://generator-surat-api.fly.dev",
-        description: "Production server V2",
+        description: "Production server",
       },
       {
         url: "http://localhost:3000",
         description: "Development server",
       },
     ],
-    paths: pathsObj,
+    paths: generateSwaggerPaths(),
   },
   apis: ["./src/routes/*.js"],
 };

@@ -1,0 +1,94 @@
+{
+  "template": "surat_dispensasi.docx",
+  "title": "Surat Dispensasi",
+  "fields": [
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "type": "text",
+      "required": true,
+      "example": "01/PAC/B/VIII/7354.7355/IX/2024",
+      "helpText": "Contoh: 01/PAC/B/VIII/7354.7355/IX/2024, Nomor surat dispensasi yang unik dan sesuai dengan format yang berlaku."
+    },
+    {
+      "name": "lampiran",
+      "label": "Lampiran",
+      "type": "text",
+      "required": true,
+      "example": "1 (satu) berkas, Jumlah lampiran yang disertakan dalam surat dispensasi.",
+      "helpText": "Contoh: 1 (satu) berkas, Jumlah lampiran yang disertakan dalam surat dispensasi."
+    },
+    {
+      "name": "tujuan_surat",
+      "label": "Tujuan Surat",
+      "type": "text",
+      "required": true,
+      "example": "Kepala Sekolah MAN 1 Nganjuk",
+      "helpText": "Contoh: Kepala Sekolah MAN 1 Nganjuk, Tujuan surat dispensasi yang ditujukan kepada pihak yang berwenang."
+    },
+    {
+      "name": "nama_kegiatan",
+      "label": "Nama Kegiatan",
+      "type": "text",
+      "required": true,
+      "example": "Pelatihan Jurnalistik & Konten Dakwah Digital",
+      "helpText": "Nama kegiatan yang diikuti oleh peserta."
+    },
+    {
+      "name": "hari_tanggal",
+      "label": "Hari, Tanggal Kegiatan",
+      "type": "text",
+      "required": true,
+      "example": "Sabtu, 20 Januari 2025",
+      "helpText": "Hari dan tanggal pelaksanaan kegiatan."
+    },
+    {
+      "name": "waktu",
+      "label": "Waktu Kegiatan",
+      "type": "text",
+      "required": true,
+      "example": "07.30 WIB s.d. selesai",
+      "helpText": "Jam pelaksanaan kegiatan dimulai hingga selesai."
+    },
+    {
+      "name": "tempat",
+      "label": "Tempat Kegiatan",
+      "type": "text",
+      "required": true,
+      "example": "Aula Kementerian Agama Kabupaten Nganjuk",
+      "helpText": "Lokasi atau tempat kegiatan dilaksanakan."
+    },
+    {
+      "name": "nama",
+      "label": "Nama Peserta",
+      "type": "text",
+      "required": true,
+      "example": "M. Ainur Ramadhan",
+      "helpText": "Nama lengkap peserta yang mengajukan dispensasi."
+    },
+    {
+      "name": "kelas_sekolah",
+      "label": "Kelas / Sekolah",
+      "type": "text",
+      "required": true,
+      "example": "XII RPL / SMK Negeri 1 Nganjuk",
+      "helpText": "Kelas dan asal sekolah peserta."
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Pembuatan Surat (Hijriah)",
+      "type": "text",
+      "required": true,
+      "example": "1 Safar 1445",
+      "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah."
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Pembuatan Surat (Masehi)",
+      "type": "text",
+      "required": true,
+      "example": "10 September 2024",
+      "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi."
+    }
+  ]
+}

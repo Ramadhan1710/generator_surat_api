@@ -3,13 +3,13 @@ import fs from "fs";
 
 export const generateSuratController = async (req, res) => {
   try {
-    const { type_surat, lembaga_name, ...data } = req.body;
+    const { type_surat, jenis_surat, ...data } = req.body;
 
     const buffer = await generateSuratUseCase({
       type_surat,
       data,
       files: req.files,
-      lembaga_name,
+      jenis_surat,
     });
 
     const fileName = type_surat.replace(/_/g, " ").toUpperCase();

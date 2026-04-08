@@ -1,0 +1,70 @@
+{
+  "template": "surat_rekomendasi",
+  "title": "Surat Rekomendasi",
+  "fields": [
+    {
+      "name": "nomor_surat",
+      "label": "Nomor Surat",
+      "type": "text",
+      "required": true,
+      "example": "01/A/PAC/SR/VIII/7354/IX/2024",
+      "helpText": "Contoh: 01/A/PAC/SR/VIII/7354/IX/2024, Nomor surat rekomendasi yang unik dan sesuai dengan format yang berlaku."
+    },
+    {
+      "name": "tanggal_hijriah",
+      "label": "Tanggal Pembuatan Surat (Hijriah)",
+      "type": "text",
+      "required": true,
+      "example": "1 Safar 1445",
+      "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah."
+    },
+    {
+      "name": "tanggal_masehi",
+      "label": "Tanggal Pembuatan Surat (Masehi)",
+      "type": "text",
+      "required": true,
+      "example": "10 September 2024",
+      "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi."
+    },
+    {
+      "name": "keterangan_rekomendasi",
+      "label": "Keterangan Rekomendasi",
+      "type": "text",
+      "required": true,
+      "example": "Untuk mengikuti Diklatama DKAC CBP KPP ZONA 1 & 2 Kab. Nganjuk, yang dilaksanakan pada hari Jumat – Minggu tanggal 26 – 28 Desember 2025 di Balai Desa Sekaran Kecamatan Loceret Kabupaten Nganjuk.",
+      "helpText": "Contoh: Untuk mengikuti Diklatama DKAC CBP KPP ZONA 1 & 2 Kab. Nganjuk, yang dilaksanakan pada hari Jumat – Minggu tanggal 26 – 28 Desember 2025 di Balai Desa Sekaran Kecamatan Loceret Kabupaten Nganjuk.,  Keterangan rekomendasi yang diberikan kepada penerima surat."
+    },
+    {
+      "name": "nama",
+      "label": "Nama Penerima Rekomendasi",
+      "type": "text",
+      "required": true,
+      "example": "Abdul Azis, Nama lengkap penerima rekomendasi yang diberikan.",
+      "helpText": "Contoh: Nama Penerima Rekomendasi, Nama lengkap penerima rekomendasi yang diberikan."
+    },
+    {
+      "name": "tempat_tanggal_lahir",
+      "label": "Tempat, Tanggal Lahir Penerima Rekomendasi",
+      "type": "text",
+      "required": true,
+      "example": "Nganjuk, 1 Januari 2000, Tempat dan tanggal lahir penerima rekomendasi yang diberikan.",
+      "helpText": "Contoh: Nganjuk, 1 Januari 2000, Tempat dan tanggal lahir penerima rekomendasi yang diberikan."
+    },
+    {
+      "name": "jabatan",
+      "label": "Jabatan Penerima Rekomendasi",
+      "type": "text",
+      "required": true,
+      "example": "Ketua PAC IPPNU Kec. Loceret, Jabatan penerima rekomendasi yang diberikan.",
+      "helpText": "Contoh: Ketua PAC IPPNU Kec. Loceret, Jabatan penerima rekomendasi yang diberikan."
+    },
+    {
+      "name": "alamat",
+      "label": "Alamat Penerima Rekomendasi",
+      "type": "text",
+      "required": true,
+      "example": "Jl. Raya Loceret No. 123, Alamat lengkap penerima rekomendasi yang diberikan.",
+      "helpText": "Contoh: Jl. Raya Loceret No. 123, Alamat lengkap penerima rekomendasi yang diberikan."
+    }
+  ]
+}

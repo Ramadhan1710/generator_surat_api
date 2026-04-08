@@ -7,17 +7,13 @@ const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
 const suratTypes = [
-    "surat-permohonan-pengesahan",
-    "berita-acara-pemilihan-ketua",
-    "berita-acara-formatur-pembentukan-pengurus-harian",
-    "berita-acara-penyusunan-pengurus",
-    "surat-keputusan",
-    "susunan-pengurus",
-    "kartu-identitas",
-    "sertifikat-kaderisasi",
-    "curriculum-vitae",
-    "surat-tugas",
-    "surat-rekomendasi"
+    "surat-permohonan-pemateri",
+    "surat-permohonan-peminjaman-alat",
+    "surat-permohonan-izin-tempat",
+    "surat-pemberitahuan",
+    "surat-undangan",
+    "surat-dispensasi",
+    "surat-permohonan-konsumsi",
 ];
 
 suratTypes.forEach((type) => {

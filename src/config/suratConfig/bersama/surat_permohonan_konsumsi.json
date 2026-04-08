@@ -1,0 +1,94 @@
+{
+    "template": "surat_permohonan_konsumsi.docx",
+    "title": "Surat Permohonan Konsumsi",
+    "fields": [
+        {
+            "name": "nomor_surat",
+            "label": "Nomor Surat",
+            "type": "text",
+            "required": true,
+            "example": "01/PAC/B/VIII/7354.7355/IX/2024",
+            "helpText": "Contoh: 01/PAC/B/VIII/7354.7355/IX/2024, Nomor surat permohonan konsumsi yang unik dan sesuai dengan format yang berlaku."
+        },
+        {
+            "name": "lampiran",
+            "label": "Lampiran",
+            "type": "text",
+            "required": true,
+            "example": "1 (satu) berkas",
+            "helpText": "Contoh: 1 (satu) berkas, Jumlah lampiran yang disertakan dalam surat permohonan konsumsi."
+        },
+        {
+            "name": "tujuan_surat",
+            "label": "Tujuan Surat",
+            "type": "text",
+            "required": true,
+            "example": "MWC NU Kec. Loceret",
+            "helpText": "Contoh: MWC NU Kec. Loceret, Tujuan surat permohonan konsumsi yang ditujukan kepada pihak yang berwenang."
+        },
+        {
+            "name": "nama_kegiatan",
+            "label": "Nama Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "Pelatihan Jurnalistik & Konten Dakwah Digital",
+            "helpText": "Nama kegiatan yang diikuti oleh peserta."
+        },
+        {
+            "name": "hari_tanggal",
+            "label": "Hari, Tanggal Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "Sabtu, 20 Januari 2025",
+            "helpText": "Hari dan tanggal pelaksanaan kegiatan."
+        },
+        {
+            "name": "waktu",
+            "label": "Waktu Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "07.30 WIB s.d. selesai",
+            "helpText": "Jam pelaksanaan kegiatan dimulai hingga selesai."
+        },
+        {
+            "name": "tempat",
+            "label": "Tempat Kegiatan",
+            "type": "text",
+            "required": true,
+            "example": "Aula Kementerian Agama Kabupaten Nganjuk",
+            "helpText": "Lokasi atau tempat kegiatan dilaksanakan."
+        },
+        {
+            "name": "nama_konsumsi",
+            "label": "Nama Konsumsi",
+            "type": "text",
+            "required": true,
+            "example": "Nasi Box, Air Mineral, dan Snack",
+            "helpText": "Contoh: Nasi Box, Air Mineral, dan Snack, Nama konsumsi yang diminta untuk kegiatan."
+        },
+        {
+            "name": "jumlah_konsumsi",
+            "label": "Jumlah Konsumsi",
+            "type": "text",
+            "required": true,
+            "example": "100 porsi",
+            "helpText": "Contoh: 100 porsi, Jumlah konsumsi yang diminta untuk kegiatan."
+        },
+        {
+            "name": "tanggal_hijriah",
+            "label": "Tanggal Pembuatan Surat (Hijriah)",
+            "type": "text",
+            "required": true,
+            "example": "1 Safar 1445",
+            "helpText": "Contoh: 1 Safar 1445, Tanggal pembuatan surat dalam format kalender Hijriah."
+        },
+        {
+            "name": "tanggal_masehi",
+            "label": "Tanggal Pembuatan Surat (Masehi)",
+            "type": "text",
+            "required": true,
+            "example": "10 September 2024",
+            "helpText": "Contoh: 10 September 2024, Tanggal pembuatan surat dalam format kalender Masehi."
+        }
+    ]
+}
